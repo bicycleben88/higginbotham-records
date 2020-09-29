@@ -21,7 +21,7 @@ db.on('open', () => {
   .on('close', () => {
     console.log(`Mongo is closed for business`);
   })
-  .on('errot', (error) => {
+  .on('error', (error) => {
     console.log(error);
   });
 
