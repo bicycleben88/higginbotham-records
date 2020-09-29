@@ -16,6 +16,7 @@ const mongoose = require('./db/dbconn');
 //Routers
 const authRouter = require('./controllers/auth');
 const testRouter = require('./controllers/test');
+const recordRouter = require('./controllers/records');
 //Other Imports
 const session = require('express-session');
 const methodOverride = require('method-override');
@@ -49,10 +50,12 @@ app.use(morgan('tiny'));
 //ROUTES/ROUTERS
 //-------------------
 app.get('/', (req, res) => {
-    res.send(`Twerkin' on PORT${PORT}`);
+    console.log(`Listening on PORT ${PORT}`);
+    res.redirect('/records');
 });
 app.use('/auth', authRouter);
 app.use('/test', testRouter);
+app.use('/records', recordRouter)
 
 //-------------------
 //LISTENER

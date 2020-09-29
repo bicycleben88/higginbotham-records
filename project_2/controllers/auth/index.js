@@ -16,12 +16,17 @@ router.get('/signup', (req, res) => {
     res.render('auth/signup.jsx');
 });
 //Create New User Post Request
-router.post('/singup', async (req, res) => {
-    //Encrypt Password
-    req.body.password = await bcrypt.hash(req.body.password, 10);
-    //Save Password in DB
-    const newUser = await User.create(req.body);
-    res.redirect('/auth/login');
+router.post('/signup', async (req, res) => {
+    try {
+        //Encrypt Password
+        req.body.password = await bcrypt.hash(req.body.password, 10);
+        //Save New User in DB
+        const newUser = await User.create(req.body);
+        res.redirect('/auth/login');
+    } catch (error) {
+        console.log(error) 
+    }
+
 });
 //----------LogIn Page-----------
 router.get('/login', (req, res) => {
