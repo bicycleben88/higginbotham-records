@@ -9,6 +9,9 @@ class Show extends React.Component {
                     <p>{record.albumTitle}</p>
                     <p>{record.artist}</p>
                     <a href={`edit/${record._id}`}><button>Edit Album</button></a>
+                    <form action={`/records/${record._id}?_method=DELETE`} method="POST">
+                        <input type="submit" defaultValue="Delete Record"/>
+                    </form>
             </div>
         );
     }

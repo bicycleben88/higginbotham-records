@@ -80,6 +80,16 @@ router.get('/seed', async (req, res) => {
         console.log(error);
     }
 });
+//Destroy
+router.delete('/:id', auth, async (req, res) => {
+    try {
+        await Record.findByIdAndDelete(req.params.id, (error, foundRecord) => {
+            res.redirect('/')
+        });
+    } catch {
+        console.log(error);
+    }
+})
 //Update
 router.put('/edit/:id', auth, async (req, res) => {
     try {
