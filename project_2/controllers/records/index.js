@@ -79,6 +79,18 @@ router.get('/seed', async (req, res) => {
         console.log(error);
     }
 });
+//Show
+router.get('/:id', async (req, res) => {
+    try {
+        await Record.findById(req.params.id, (error, foundRecord) => {
+            res.render('record/show', {
+                record: foundRecord
+            })
+        });
+    } catch (error) {
+        console.log(error);
+    }
+});
 
 //Export Router
 module.exports = router;

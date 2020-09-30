@@ -1,6 +1,6 @@
 const React = require('react');
 
-class Record extends React.Component {
+class Index extends React.Component {
     render() {
         const { records } = this.props;
         return (
@@ -19,4 +19,4 @@ class Record extends React.Component {
     }
 }
 
-module.exports = Record;
+module.exports = Index;
