@@ -17,6 +17,7 @@ const mongoose = require('./db/dbconn');
 const authRouter = require('./controllers/auth');
 const testRouter = require('./controllers/test');
 const recordRouter = require('./controllers/records');
+const userRouter = require('./controllers/user');
 //Other Imports
 const session = require('express-session');
 const methodOverride = require('method-override');
@@ -55,7 +56,8 @@ app.get('/', (req, res) => {
 });
 app.use('/auth', authRouter);
 app.use('/test', testRouter);
-app.use('/records', recordRouter)
+app.use('/records', recordRouter);
+app.use('/user', userRouter);
 
 //-------------------
 //LISTENER

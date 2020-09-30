@@ -44,7 +44,7 @@ router.post('/login', async (req, res) => {
         //Save Info in Session that User is LoggedIn and Username
         req.session.login = true;
         req.session.username = user[0].username;
-        res.redirect('/');
+        res.redirect(`/user/${user[0]._id}`);
         } else {
             //Redirect to LogIn Page 
             res.render('auth/fail.jsx');
