@@ -2,8 +2,9 @@
 //DEPENDENCIES
 //-----------------
 const { Router } = require('express');
-const auth = require('../authmiddleware');
 const Record = require('../../models/records');
+const auth = require('../../controllers/authmiddleware');
+const { route } = require('../auth');
 
 //Create Router
 const router = Router();
@@ -79,13 +80,35 @@ router.get('/seed', async (req, res) => {
         console.log(error);
     }
 });
+//Update
+router.put('/edit/:id', auth, async (req, res) => {
+    try {
+        await Record.findByIdAndUpdate(req.params.id, req.body, (error, updatedBike) => {
+            res.redirect(`/records/${req.params.id}`);
+        });
+    } catch (error) {
+        console.log(error);
+    }
+});
+//Edit
+router.get('/edit/:id', auth, async (req, res) => {
+    try {
+        await Record.findById(req.params.id, (error, foundRecord) => {
+            res.render('record/edit', { 
+                record: foundRecord
+            });
+        });
+    } catch (error) {
+        console.log(error);
+    }
+});
 //Show
 router.get('/:id', async (req, res) => {
     try {
         await Record.findById(req.params.id, (error, foundRecord) => {
             res.render('record/show', {
                 record: foundRecord
-            })
+            });
         });
     } catch (error) {
         console.log(error);

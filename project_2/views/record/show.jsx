@@ -8,6 +8,7 @@ class Show extends React.Component {
                     <img src={record.albumArtwork} alt="Album Artwork"/>
                     <p>{record.albumTitle}</p>
                     <p>{record.artist}</p>
+                    <a href={`edit/${record._id}`}><button>Edit Album</button></a>
             </div>
         );
     }
