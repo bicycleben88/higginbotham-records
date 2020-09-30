@@ -10,8 +10,8 @@ class Edit extends React.Component {
                     Name: <input type="text" defaultValue={user.name} name="name"/>
                     Favorite Album: <input type="text" defaultValue={user.favoriteAlbum} name="favoriteAlbum"/>
                     Image: <input type="text" defaultValue={user.image} name="image"/>
-                    Password: <input type="text" name="password"/>
-                    <input type="submit" defailtValue="Update Profile"/>
+                    {/* Password: <input type="text" name="password"/> */}
+                    <input type="submit" defaultValue="Update Profile"/>
                 </form>
                 
             </div>

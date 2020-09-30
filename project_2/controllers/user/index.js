@@ -27,8 +27,8 @@ router.delete('/:id', auth, async (req, res) => {
 router.put('/edit/:id', auth, async (req, res) => {
     try {
         req.body.username = req.session.username;
-        req.body.password = req.session.password;
-        await User.findByIdAndUpdate(req.params.id, req.body, (error, foundUser) => {
+        User.findByIdAndUpdate(req.params.id, req.body, (error, foundUser) => {
+            req.body.password = foundUser.password;
             res.redirect(`/user/${req.params.id}`);
 
         });
