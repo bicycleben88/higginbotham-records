@@ -15,11 +15,6 @@
     * CSS Bootstrap
 
 ### MVP:
-    Login:
-        * CRUD login profile
-            * Name
-            * Username
-            * Password
     Record collection:
         *CRUD collection of record
         * Browse records from seed data 
@@ -27,13 +22,16 @@
             * Album Name
             * Genre
             * Release Date
-    Users
+    Users:
         *CRUD User profile  
             * Add records to data base
             * Leave review 
             * Add users' records and reviews to database
             * Display users' records and reviews
-    Sort Records
+    Login:
+        * Encrypt Password
+        * Store new user in data base
+    Sort Records:
         * By artist name
         * By album name
         * By genre
