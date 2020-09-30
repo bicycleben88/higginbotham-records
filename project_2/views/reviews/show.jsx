@@ -12,6 +12,7 @@ class Show extends React.Component {
                                 <form action={`/reviews/${review._id}?_method=DELETE`} method="POST">
                                     <input type="submit" defaultValue="Delete Review"/>
                                 </form>
+                                <a href={`/reviews/edit/${review._id}`}>Edit Review</a>
                             </div>
                   })
               }

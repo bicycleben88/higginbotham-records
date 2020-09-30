@@ -4,6 +4,7 @@
 const { Router } = require('express');
 const auth = require('../authmiddleware');
 const Review = require('../../models/reviews');
+const { route } = require('../auth');
 
 //Create Router
 const router = Router();
@@ -28,6 +29,17 @@ router.delete('/:id', auth, async (req, res) => {
         console.log(error);
     }
 })
+//Update 
+router.put('/edit/:id', auth, async (req, res) => {
+    try {
+        req.body.username = req.session.username;
+        await Review.findByIdAndUpdate(req.params.id, req.body, (error, updatedReview) => {
+            res.redirect(`/reviews/${updatedReview.bandId}`);
+        });
+    } catch (error) {
+        console.log(error);
+    }
+});
 //Create
 router.post('/new/:id', auth, async (req, res) => {
     try {
@@ -37,6 +49,19 @@ router.post('/new/:id', auth, async (req, res) => {
         res.redirect(`/reviews/${req.params.id}`);
     } catch (error) {
         console.log(error) 
+    }
+});
+//Edit
+router.get('/edit/:id', auth, async (req, res) => {
+    try {
+        await Review.findById(req.params.id, (error, foundReview) => {
+            res.render('reviews/edit', { 
+                review: foundReview,
+                id: foundReview.bandId
+            });
+        });
+    } catch (error) {
+        console.log(error);
     }
 });
 //Show
