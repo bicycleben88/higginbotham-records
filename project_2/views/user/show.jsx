@@ -6,6 +6,7 @@ class Show extends React.Component {
         return (
             <div>
                 <h1>Welcome to the user page {user.name}</h1>
+                <a href="/records">home</a>
                 <img src={user.image} alt="profile picture"/>
                 <h3>Favorite Album:</h3>
                 <p>{user.favoriteAlbum}</p>

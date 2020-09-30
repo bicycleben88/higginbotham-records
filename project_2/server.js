@@ -18,6 +18,7 @@ const authRouter = require('./controllers/auth');
 const testRouter = require('./controllers/test');
 const recordRouter = require('./controllers/records');
 const userRouter = require('./controllers/user');
+const reviewRouter = require('./controllers/reviews');
 //Other Imports
 const session = require('express-session');
 const methodOverride = require('method-override');
@@ -70,6 +71,7 @@ app.use('/auth', authRouter);
 app.use('/test', testRouter);
 app.use('/records', recordRouter);
 app.use('/user', userRouter);
+app.use('/reviews', reviewRouter);
 
 //-------------------
 //LISTENER
