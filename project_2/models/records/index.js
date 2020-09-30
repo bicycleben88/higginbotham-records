@@ -4,10 +4,14 @@ const { Schema, model } = require("mongoose");
 const recordSchema = new Schema({
     username: { type: String, required: true },
     albumArtwork: String,
+    albumeTitle: String,
     artist: String,
     genre: String,
-    releaseDate: String
+    releaseDate: String,
 });
 
 //Create Model
-const User = model('record', recordSchema);
+const Record = model('record', recordSchema);
+
+//Export Model
+module.exports = Record;

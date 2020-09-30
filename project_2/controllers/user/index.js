@@ -32,7 +32,7 @@ router.put('/edit/:id', auth, async (req, res) => {
             res.redirect(`/user/${req.params.id}`);
 
         });
-    } catch {
+    } catch (error) {
         console.log(error);
     }
 });
@@ -44,7 +44,7 @@ router.get('/edit/:id', auth, async (req, res) => {
                 user: foundUser
             });
         });
-    } catch {
+    } catch (error)  {
         console.log(error);
     }
 });
@@ -56,7 +56,7 @@ router.get('/:id', auth, async (req, res) => {
                 user: foundUser
             });
         })
-    } catch {
+    } catch (error)  {
         console.log(error);
     }
 });
