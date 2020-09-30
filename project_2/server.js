@@ -22,6 +22,7 @@ const userRouter = require('./controllers/user');
 const session = require('express-session');
 const methodOverride = require('method-override');
 const morgan = require('morgan');
+const mongoStore = require('connect-mongo')(session);
 
 //------------------
 //SET VIEW ENGINE
@@ -37,8 +38,8 @@ app.use(
     session({
         secret: SECRET,
         resave: false,
-        saveUninitialized: true,
-        cookie: { secure: process.env.NODE_ENV === "production"},
+        saveUninitialized: false,
+        store: new mongoStore({ mongooseConnection: mongoose.connection }),
     })
 );
 app.use(express.static('public'));
