@@ -7,7 +7,12 @@ class Show extends React.Component {
             <div>
               {
                   reviews.map((review) => {
-                    return <p>{review.title}</p>
+                      return <div>
+                                <p>{review.title}</p>
+                                <form action={`/reviews/${review._id}?_method=DELETE`} method="POST">
+                                    <input type="submit" defaultValue="Delete Review"/>
+                                </form>
+                            </div>
                   })
               }
               <a href={`/reviews/new/${id}`}>Add Review</a>

@@ -18,6 +18,16 @@ router.get('/new/:id', auth, (req, res) => {
         id: req.params.id
     });
 });
+//Destroy
+router.delete('/:id', auth, async (req, res) => {
+    try {
+        await Review.findByIdAndDelete(req.params.id, (error, foundReview) => {
+            res.redirect(`/reviews/${foundReview.bandId}`);
+        });
+    } catch (error) {
+        console.log(error);
+    }
+})
 //Create
 router.post('/new/:id', auth, async (req, res) => {
     try {
