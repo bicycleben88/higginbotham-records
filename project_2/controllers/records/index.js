@@ -58,8 +58,16 @@ const recordsSeed = [
 //ROUTES
 //-----------------
 //Index
-router.get('/', (req, res) => {
-    res.render('record/index');
+router.get('/', async (req, res) => {
+    try {
+        await Record.find({}, (error, records) => {
+            res.render('record/index', {
+                records: records
+            });
+        });
+    } catch (error) {
+        console.log(error);
+    }
 });
 //Seed Data
 router.get('/seed', async (req, res) => {
