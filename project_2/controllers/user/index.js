@@ -14,7 +14,15 @@ const router = Router();
 //-----------------
 
 //Destroy
-
+router.delete('/:id', auth, async (req, res) => {
+    try {
+        await User.findByIdAndDelete(req.params.id, (error, foundUser) => {
+            res.redirect('/')
+        });
+    } catch {
+        console.log(error);
+    }
+})
 //Update
 router.put('/edit/:id', auth, async (req, res) => {
     try {
