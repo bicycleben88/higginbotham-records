@@ -4,7 +4,6 @@
 const { Router } = require('express');
 const Record = require('../../models/records');
 const auth = require('../../controllers/authmiddleware');
-const { route } = require('../auth');
 
 //Create Router
 const router = Router();
@@ -80,6 +79,10 @@ router.get('/seed', async (req, res) => {
         console.log(error);
     }
 });
+//New
+router.get('/new', auth, (req, res) => {
+    res.render('record/new');
+});
 //Destroy
 router.delete('/:id', auth, async (req, res) => {
     try {
@@ -93,11 +96,22 @@ router.delete('/:id', auth, async (req, res) => {
 //Update
 router.put('/edit/:id', auth, async (req, res) => {
     try {
+        req.body.username = req.session.username;
         await Record.findByIdAndUpdate(req.params.id, req.body, (error, updatedBike) => {
             res.redirect(`/records/${req.params.id}`);
         });
     } catch (error) {
         console.log(error);
+    }
+});
+//Create
+router.post('/new', async (req, res) => {
+    try {
+        req.body.username = req.session.username;
+        await Record.create(req.body);
+        res.redirect('/records');
+    } catch (error) {
+        console.log(error) 
     }
 });
 //Edit
