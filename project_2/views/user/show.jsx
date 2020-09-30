@@ -10,6 +10,10 @@ class Show extends React.Component {
                 <h3>Favorite Album:</h3>
                 <p>{user.favoriteAlbum}</p>
                 <a href="/auth/logout"><button>Log Out</button></a>
+                <a href={`edit/${user._id}`}><button>Update Profile</button></a>
+                <form action={`/user/${user._id}?_method=DELETE`} method="post">
+                    <input type="submit" defaultValue="Delete Profile"/>
+                </form>
             </div>
         );
     }
