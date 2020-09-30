@@ -1,10 +1,11 @@
 const React = require('react');
+const Layout = require('../Layout');
 
 class Edit extends React.Component {
     render() {
         const { record } = this.props;
         return (
-            <div>
+            <Layout>
                 <form action={`/records/edit/${record._id}?_method=PUT`} method="POST">
                     <input type="text" name="artist" defaultValue={record.artist}/>
                     <input type="text" name="albumTitle" defaultValue={record.albumTitle}/>
@@ -13,7 +14,7 @@ class Edit extends React.Component {
                     <input type="text" name="albumArtwork" defaultValue={record.albumArtwork}/>
                     <input type="submit" defaultValue="Edit Album"/>
                 </form> 
-            </div>
+            </Layout>
         );
     }
 }

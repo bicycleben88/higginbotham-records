@@ -1,10 +1,11 @@
 const React = require('react');
+const Layout = require('../Layout');
 
 class Show extends React.Component {
     render() {
         const { reviews, id } = this.props
         return (
-            <div>
+            <Layout>
               {
                   reviews.map((review) => {
                       return <div>
@@ -17,7 +18,7 @@ class Show extends React.Component {
                   })
               }
               <a href={`/reviews/new/${id}`}>Add Review</a>
-            </div>
+            </Layout>
         );
     }
 }

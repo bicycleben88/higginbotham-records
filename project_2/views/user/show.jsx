@@ -1,10 +1,11 @@
 const React = require('react');
+const Layout = require('../Layout');
 
 class Show extends React.Component {
     render() {
         const { user } = this.props
         return (
-            <div>
+            <Layout>
                 <h1>Welcome to the user page {user.name}</h1>
                 <a href="/records">home</a>
                 <img src={user.image} alt="profile picture"/>
@@ -15,7 +16,7 @@ class Show extends React.Component {
                 <form action={`/user/${user._id}?_method=DELETE`} method="post">
                     <input type="submit" defaultValue="Delete Profile"/>
                 </form>
-            </div>
+            </Layout>
         );
     }
 }

@@ -1,10 +1,11 @@
 const React = require('react');
+const Layout = require('../Layout');
 
 class Show extends React.Component {
     render() {
         const { record } = this.props;
         return (
-            <div>
+            <Layout>
                     <img src={record.albumArtwork} alt="Album Artwork"/>
                     <p>{record.albumTitle}</p>
                     <p>{record.artist}</p>
@@ -13,7 +14,7 @@ class Show extends React.Component {
                         <input type="submit" defaultValue="Delete Record"/>
                     </form>
                     <a href={`/reviews/${record._id}`}>Reviews</a>
-            </div>
+            </Layout>
         );
     }
 }

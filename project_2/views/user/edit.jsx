@@ -1,10 +1,11 @@
 const React = require('react');
+const Layout = require('../Layout');
 
 class Edit extends React.Component {
     render() {
         const { user } = this.props
         return (
-            <div>
+            <Layout>
                 <h1>Edit your page {user.name}</h1>
                 <form action={`/user/edit/${user._id}?_method=PUT`} method="POST">
                     Name: <input type="text" defaultValue={user.name} name="name"/>
@@ -14,7 +15,7 @@ class Edit extends React.Component {
                     <input type="submit" defaultValue="Update Profile"/>
                 </form>
                 
-            </div>
+            </Layout>
         );
     }
 }

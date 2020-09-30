@@ -1,9 +1,10 @@
 const React = require('react');
+const Layout = require('../Layout');
 
 class SignUp extends React.Component {
     render() {
         return (
-            <div>
+            <Layout>
                 <h1>SignUp Page</h1>
                 <form action="/auth/signup" method="POST">
                     Name: <input type="text" name="name"/>
@@ -14,7 +15,7 @@ class SignUp extends React.Component {
                     <input type="submit" value="Create User"/>
                 </form>
 
-            </div>
+            </Layout>
         );
     }
 }
