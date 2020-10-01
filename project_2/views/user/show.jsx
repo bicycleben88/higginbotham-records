@@ -5,7 +5,7 @@ class Show extends React.Component {
     render() {
         const { user } = this.props
         return (
-            <Layout>
+            <Layout title={user.name}>
                 <h1>Welcome to the user page {user.name}</h1>
                 <a href="/records">home</a>
                 <img src={user.image} alt="profile picture"/>

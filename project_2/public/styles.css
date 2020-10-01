@@ -1,0 +1,45 @@
+/* ---------Layout Styles---------------- */
+
+.header-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+}
+.nav-container {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+}
+.nav-container li {
+    flex: 1;
+}
+.nav-container .nav-logo {
+    flex: 4;
+}
+.nav-container .nav-social img {
+    width: 50px;
+}
+
+@media all and (max-width: 1000px) {
+    .nav-container {
+        flex-wrap: wrap;
+    }
+    .nav-container .nav-logo {
+        flex: 1 1 100%;
+    }
+    .nav-container li {
+        flex: 1 1 33.33333%;
+    }
+
+    .nav-container .nav-social {
+        text-align: right;
+    }
+} 
+
+@media all and (max-width: 700px) {
+    .nav-container li {
+        flex-basis: 100%;
+    }
+}
