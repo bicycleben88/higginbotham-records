@@ -4,16 +4,18 @@ const Layout = require('../Layout');
 class SignUp extends React.Component {
     render() {
         return (
-            <Layout>
+            <Layout title="Sign Up">
                 <h1>SignUp Page</h1>
-                <form action="/auth/signup" method="POST">
-                    Name: <input type="text" name="name"/>
-                    Favorite Album: <input type="text" name="favoriteAlbum" id=""/>
-                    Image Url: <input type="text" name="image"/>
-                    Username: <input type="text" name="username" id=""/>
-                    Password: <input type="text" name="password"/>
-                    <input type="submit" value="Create User"/>
-                </form>
+                <div className="sign-up-container">
+                    <form action="/auth/signup" method="POST" className="sign-up-form">
+                        <input type="text" name="name" placeholder="Name"/>
+                        <input type="text" name="favoriteAlbum" placeholder="Favorite Album"/>
+                        <input type="text" name="image" placeholder="Image Url"/>
+                        <input type="text" name="username" placeholder="Username"/>
+                        <input type="text" name="password" placeholder="Password"/>
+                        <input type="submit" value="Create User"/>
+                    </form>
+                </div>
 
             </Layout>
         );

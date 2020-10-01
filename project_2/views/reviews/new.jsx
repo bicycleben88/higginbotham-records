@@ -6,11 +6,13 @@ class New extends React.Component {
         const { review, id } = this.props
         return (
             <Layout>
-              <form action={`/reviews/new/${id}`} method="POST">
-                  <input type="text" name="title" placeholder="Title"/>
-                  <input type="formfield" name="body" placeholder="Review"/>
-                  <input type="submit" defaultValue="Add Review"/>
-              </form>
+                <div className="new-review-container">
+                    <form action={`/reviews/new/${id}`} method="POST" className="new-review-form">
+                        <input type="text" name="title" placeholder="Title"/>
+                        <input type="formfield" name="body" placeholder="Review"/>
+                        <input type="submit" defaultValue="Add Review"/>
+                    </form>
+                </div>
             </Layout>
         );
     }

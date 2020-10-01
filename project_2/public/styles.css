@@ -22,7 +22,35 @@
     width: 50px;
 }
 
+/* ----------- Form Styles ----------------- */
+
+.sign-up-container,
+.log-in-container,
+.edit-user-container,
+.edit-album-container,
+.new-album-container,
+.edit-review-container,
+.new-review-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.sign-up-form,
+.log-in-form,
+.edit-user-form,
+.edit-album-form,
+.new-album-form,
+.edit-review-form,
+.new-review-form {
+    display: flex;
+    border: 20px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
 @media all and (max-width: 1000px) {
+/* ------------- Layout Styles ------------------- */
     .nav-container {
         flex-wrap: wrap;
     }

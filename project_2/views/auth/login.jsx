@@ -6,11 +6,13 @@ class LogIn extends React.Component {
         return (
             <Layout>
                 <h1>Login Page</h1>
-                <form action="/auth/login" method="post">
-                    <input type="text" name="username" placeholder="username"/>
-                    <input type="text" name="password" placeholder="password"/>
-                    <input type="submit" value="login"/>
-                </form>
+                <div className="log-in-container">
+                    <form action="/auth/login" method="post" className="log-in-form">
+                        <input type="text" name="username" placeholder="username"/>
+                        <input type="text" name="password" placeholder="password"/>
+                        <input type="submit" value="login"/>
+                    </form>
+                </div>
             </Layout>
         );
     }

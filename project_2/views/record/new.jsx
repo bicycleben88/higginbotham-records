@@ -6,14 +6,16 @@ class New extends React.Component {
         const { record } = this.props;
         return (
             <Layout>
-                <form action={`/records/new`} method="POST">
-                    <input type="text" name="artist" placeholder="Artist"/>
-                    <input type="text" name="albumTitle" placeholder="Album Title"/>
-                    <input type="text" name="genre" placeholder="Genre"/>
-                    <input type="text" name="releaseDate" placeholder="Release Date"/>
-                    <input type="text" name="albumArtwork" placeholder="Album Artwork URL"/>
-                    <input type="submit" defaultValue="Add Album"/>
-                </form> 
+                <div className="new-album-container">
+                    <form action={`/records/new`} method="POST" className="new-album-form">
+                        <input type="text" name="artist" placeholder="Artist"/>
+                        <input type="text" name="albumTitle" placeholder="Album Title"/>
+                        <input type="text" name="genre" placeholder="Genre"/>
+                        <input type="text" name="releaseDate" placeholder="Release Date"/>
+                        <input type="text" name="albumArtwork" placeholder="Album Artwork URL"/>
+                        <input type="submit" defaultValue="Add Album"/>
+                    </form> 
+                </div>
             </Layout>
         );
     }
