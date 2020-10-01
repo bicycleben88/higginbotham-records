@@ -1,3 +1,5 @@
+/* Flexbox code inspired by Wes Bos "What the FlexBox" lessons: https://flexbox.io */
+
 /* ---------Layout Styles---------------- */
 
 .header-wrapper {
@@ -49,6 +51,24 @@
     border-radius: 5px;
 }
 
+
+/* ---------------- Records ---------------------- */
+.index-records-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    margin: 0 auto;
+    align-items: center;
+}
+.index-records-images {
+    flex: 1;
+    margin: 5px;
+}
+.index-records-container img {
+    max-width: 250px;
+    border: 2px solid aquamarine;
+}
 @media all and (max-width: 1000px) {
 /* ------------- Layout Styles ------------------- */
     .nav-container {
