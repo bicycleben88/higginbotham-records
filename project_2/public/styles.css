@@ -69,6 +69,22 @@
     max-width: 250px;
     border: 2px solid aquamarine;
 }
+.show-records-container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.show-records-image {
+    width: 300px;
+}
+.show-records-container ul {
+    flex: 2;
+    list-style-type: none;
+}
+.show-records-container aside {
+    text-align: right;
+}
+
 @media all and (max-width: 1000px) {
 /* ------------- Layout Styles ------------------- */
     .nav-container {
