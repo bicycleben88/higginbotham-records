@@ -89,8 +89,8 @@ main {
     border-radius: 5px;
 }
 
-
 /* ---------------- Records ---------------------- */
+
 .index-records-container {
     display: flex;
     justify-content: center;
@@ -98,6 +98,7 @@ main {
     height: 100vh;
     margin: 0 auto;
     align-items: center;
+    width: 90%;
 }
 .index-records-images {
     flex: 1;
@@ -107,57 +108,74 @@ main {
     max-width: 250px;
     border: 2px solid aquamarine;
 }
-.show-records-container {
-    display: flex;
-    margin: 0 auto;
-    justify-content: space-between;
-}
-.show-records-image {
-    width: 300px;
-}
-.show-records-container ul {
-    flex: 2;
-    list-style-type: none;
-}
-.show-records-container aside {
-    text-align: right;
-}
 
-/* ----------------- User ------------------------ */
+/* ------------- Show Pages ------------------- */
+
+.show-records-container,
 .show-user-container {
     display: flex;
-    justify-content: space-between;
     margin: 0 auto;
+    justify-content: space-between;
+    width: 90%;
+    height: 100vh;
+    align-items: center;
 }
+.show-records-container div,
+.show-user-container div { 
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+.show-records-container div h1,
+.show-user-container div h1  {
+    font-family: 'Epilogue', sans-serif;
+    font-style: italic;
+}
+.show-records-image,
 .show-user-container img {
     width: 300px;
 }
-.show-user-container div {
-    flex: 2;
-    padding-left: 10px;
-}
-.show-user-container aside {
-    text-align: right;
+.show-records-container aside,
+.show-user-container aside  {
     display: flex;
     flex-direction: column;
+    height: 300px;
+    justify-content: space-evenly;
+}
+.show-records-container .button,
+.show-user-container .button {
+    background: linear-gradient(to top right, #94ecf7 45%, #f7d0f7 , #73f0be);
+    padding: 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 50%;
+    width: 100px;
+    font-size: 18px;
+}
+.show-records-container .button:hover,
+.show-user-container .button:hover {
+    cursor: pointer;
 }
 
 /* --------------- Reviews ----------------------- */
+
 .show-review-container {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    width: 90%;
 }
-
 .show-review-container div {
     flex: 2;
 }
-
 .show-review-container aside {
     display: flex;
     flex-direction: column;
     text-align: right;
 }
+
+
 @media all and (max-width: 1000px) {
 /* ------------- Layout Styles ------------------- */
     .nav-container {

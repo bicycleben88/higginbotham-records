@@ -6,20 +6,20 @@ class Show extends React.Component {
         const { record } = this.props;
         return (
             <Layout>
-                    <h1>{record.artist}</h1>
                     <div className="show-records-container">
                         <img src={record.albumArtwork} alt="Album Artwork" className="show-records-image"/>
-                        <ul>
-                            <li>{record.albumTitle}</li>
-                            <li>{record.genre}</li>
-                            <li>{record.releaseDate}</li>
-                        </ul>
+                        <div>
+                            <h4>{record.artist}: </h4>
+                            <h1>{record.albumTitle}</h1>
+                            <h4>Genre: {record.genre}</h4>
+                            <h4>Release: {record.releaseDate}</h4>
+                        </div>
                         <aside>
-                            <a href={`edit/${record._id}`}><button>Edit Album</button></a>
+                            <a href={`edit/${record._id}`}><button className="button">Edit</button></a>
+                            <a href={`/reviews/${record._id}`}> <button className="button">Review</button></a>
                             <form action={`/records/${record._id}?_method=DELETE`} method="POST">
-                                <input type="submit" defaultValue="Delete Record"/>
+                                <input type="submit" defaultValue="Delete" className="button"/>
                             </form>
-                            <a href={`/reviews/${record._id}`}> <button>  Reviews</button></a>
                         </aside>
                     </div>
             </Layout>
