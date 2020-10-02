@@ -85,6 +85,41 @@
     text-align: right;
 }
 
+/* ----------------- User ------------------------ */
+.show-user-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.show-user-container img {
+    width: 300px;
+}
+.show-user-container div {
+    flex: 2;
+    padding-left: 10px;
+}
+.show-user-container aside {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --------------- Reviews ----------------------- */
+.show-review-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.show-review-container div {
+    flex: 2;
+}
+
+.show-review-container aside {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
 @media all and (max-width: 1000px) {
 /* ------------- Layout Styles ------------------- */
     .nav-container {
