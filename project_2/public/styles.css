@@ -1,3 +1,15 @@
+body {
+    /* get background image to cover the entire page (i.e no white space) source = https://css-tricks.com/perfect-full-page-background-image/*/
+    background: linear-gradient(to top right, #94ecf7 45%, #f7d0f7 , #73f0be) no-repeat center center fixed;
+    background-size: cover;
+}
+main {
+    background-image: url('/images/record_store.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto 0;
+}
+
 /* Flexbox code inspired by Wes Bos "What the FlexBox" lessons: https://flexbox.io */
 
 /* ---------Layout Styles---------------- */
@@ -47,7 +59,7 @@
 .edit-review-form,
 .new-review-form {
     display: flex;
-    border: 20px solid rgba(0, 0, 0, 0.3);
+    border: 20px solid rgba(0, 0, 0, 0.6);
     border-radius: 5px;
 }
 
