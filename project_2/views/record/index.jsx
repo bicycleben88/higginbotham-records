@@ -7,7 +7,7 @@ class Index extends React.Component {
         console.log(randomIndex);
         const { records } = this.props;
         return (
-            <Layout>
+            <Layout title="Higginbotham Records">
                 <div className="index-records-container">
                     <div className="index-small-records-container">
                     {

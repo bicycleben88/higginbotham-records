@@ -5,7 +5,7 @@ class Edit extends React.Component {
     render() {
         const { record } = this.props;
         return (
-            <Layout>
+            <Layout title={record.albumTitle}>
                 <div className="edit-album-container">
                     <form action={`/records/edit/${record._id}?_method=PUT`} method="POST" className="edit-album-form">
                         <input type="text" name="artist" defaultValue={record.artist}/>

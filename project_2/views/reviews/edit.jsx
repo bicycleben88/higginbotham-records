@@ -5,7 +5,7 @@ class Edit extends React.Component {
     render() {
         const { review, id } = this.props
         return (
-            <Layout>
+            <Layout title="Edit Review">
                 <div className="edit-review-container">
                     <form action={`/reviews/edit/${review._id}?_method=PUT`} method="POST" className="edit-review-form">
                         <input type="text" name="userId" defaultValue={review.userId} style={{display: 'none'}}/>

@@ -5,7 +5,7 @@ class New extends React.Component {
     render() {
         const { userId, albumId } = this.props
         return (
-            <Layout>
+            <Layout title="New Review">
                 <div className="new-review-container">
                     <form action={`/reviews/new/${albumId}`} method="POST" className="new-review-form">
                         <input type="text" name="userId" defaultValue={userId} style={{display: 'none'}}/>

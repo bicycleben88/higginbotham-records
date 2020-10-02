@@ -5,7 +5,7 @@ class Show extends React.Component {
     render() {
         const { reviews, id } = this.props
         return (
-            <Layout>
+            <Layout title="Reviews">
                 <div className="show-review-container">
                     <aside>
                         <a href={`/reviews/new/${id}`}><button className="button">Add</button></a>

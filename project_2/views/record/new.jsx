@@ -5,7 +5,7 @@ class New extends React.Component {
     render() {
         const { record } = this.props;
         return (
-            <Layout>
+            <Layout title="Add New Album">
                 <div className="new-album-container">
                     <form action={`/records/new`} method="POST" className="new-album-form">
                         <input type="text" name="artist" placeholder="Artist"/>

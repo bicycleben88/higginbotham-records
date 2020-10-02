@@ -5,7 +5,7 @@ class Show extends React.Component {
     render() {
         const { record } = this.props;
         return (
-            <Layout>
+            <Layout title={record.albumTitle}>
                     <div className="show-records-container">
                         <img src={record.albumArtwork} alt="Album Artwork" className="show-records-image"/>
                         <div>
