@@ -12,6 +12,7 @@ main {
     margin: auto 0;
 }
 
+
 /* Flexbox code inspired by Wes Bos "What the FlexBox" lessons: https://flexbox.io */
 
 /* ---------Layout Styles---------------- */
@@ -29,11 +30,17 @@ main {
     border: 1px solid black;
     background: rgba(0, 0, 0, 0.4)
 }
-.nav-container h1 {
+.nav-container h1,
+.log-in-two-header {
     font-family: 'Epilogue', sans-serif;
     font-style: italic;
     color: white;
     padding-left: 10px;
+}
+.log-in-two-header{
+    padding: 7px;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .nav-container li {
     flex: 1;

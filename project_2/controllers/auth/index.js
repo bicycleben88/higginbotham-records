@@ -47,11 +47,11 @@ router.post('/login', async (req, res) => {
         res.redirect(`/user/${user[0]._id}`);
         } else {
             //Redirect to LogIn Page 
-            res.render('auth/fail.jsx');
+            res.render('auth/login2');
         }
     } else {
         //Redirect to LogIn Page 
-        res.render('auth/fail.jsx');
+        res.render('auth/login2');
     }
 });
 //-------LogOut--------------

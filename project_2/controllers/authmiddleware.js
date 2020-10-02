@@ -2,7 +2,7 @@ const auth = (req, res, next) => {
     if (req.session.login) {
         next();
     } else {
-        res.redirect('/records')
+        res.render('auth/login2')
     }
 }
 

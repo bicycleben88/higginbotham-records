@@ -97,7 +97,7 @@ router.delete('/:id', auth, async (req, res) => {
 router.put('/edit/:id', auth, async (req, res) => {
     try {
         req.body.username = req.session.username;
-        await Record.findByIdAndUpdate(req.params.id, req.body, (error, updatedBike) => {
+        await Record.findByIdAndUpdate(req.params.id, req.body, (error, updatedRecord) => {
             res.redirect(`/records/${req.params.id}`);
         });
     } catch (error) {
