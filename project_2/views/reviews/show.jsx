@@ -6,24 +6,25 @@ class Show extends React.Component {
         const { reviews, id } = this.props
         return (
             <Layout>
-                <h1>Reviews:</h1>
-                {
-                    reviews.map((review) => {
-                        return <div className="show-review-container">
-                                    <div>
+                <div className="show-review-container">
+                    <aside>
+                        <a href={`/reviews/new/${id}`}><button className="button">Add</button></a>
+                    </aside>
+                    {
+                        reviews.map((review) => {
+                            return <div className="review-text">
                                         <h3>Title: {review.title}</h3>
                                         <p>Review: {review.body}</p>
+                                        <div className="review-buttons buttons">
+                                            <form action={`/reviews/${review._id}?_method=DELETE`} method="POST">
+                                                <input type="submit" defaultValue="Delete" className="button"/>
+                                            </form>
+                                            <a href={`/reviews/edit/${review._id}`}><button className="button"> Edit</button></a>
+                                        </div>
                                     </div>
-                                    <aside>
-                                        <form action={`/reviews/${review._id}?_method=DELETE`} method="POST">
-                                            <input type="submit" defaultValue="Delete Review"/>
-                                        </form>
-                                        <a href={`/reviews/edit/${review._id}`}><button> Edit Review</button></a>
-                                    </aside>
-                                </div>
-                            })
-                }
-              <a href={`/reviews/new/${id}`}><button>Add Review</button></a>
+                                })
+                    }
+                </div>
             </Layout>
         );
     }

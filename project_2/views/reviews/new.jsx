@@ -10,7 +10,7 @@ class New extends React.Component {
                     <form action={`/reviews/new/${id}`} method="POST" className="new-review-form">
                         <input type="text" name="title" placeholder="Title"/>
                         <input type="formfield" name="body" placeholder="Review"/>
-                        <input type="submit" defaultValue="Add Review"/>
+                        <input type="submit" defaultValue="Add Review" className="button"/>
                     </form>
                 </div>
             </Layout>

@@ -13,7 +13,7 @@ class New extends React.Component {
                         <input type="text" name="genre" placeholder="Genre"/>
                         <input type="text" name="releaseDate" placeholder="Release Date"/>
                         <input type="text" name="albumArtwork" placeholder="Album Artwork URL"/>
-                        <input type="submit" defaultValue="Add Album"/>
+                        <input type="submit" defaultValue="Add Album" className="button"/>
                     </form> 
                 </div>
             </Layout>

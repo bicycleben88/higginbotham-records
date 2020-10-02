@@ -13,7 +13,7 @@ class Edit extends React.Component {
                         <input type="text" name="genre" defaultValue={record.genre}/>
                         <input type="text" name="releaseDate" defaultValue={record.releaseDate}/>
                         <input type="text" name="albumArtwork" defaultValue={record.albumArtwork}/>
-                        <input type="submit" defaultValue="Edit Album"/>
+                        <input type="submit" defaultValue="Edit Album" className="button"/>
                     </form> 
                 </div>
             </Layout>

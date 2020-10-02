@@ -88,8 +88,28 @@ main {
     border: 20px solid rgba(0, 0, 0, 0.6);
     border-radius: 5px;
 }
-
-/* ---------------- Records ---------------------- */
+.sign-up-container .button,
+.log-in-form .button,
+.edit-user-form .button,
+.edit-album-form .button,
+.new-album-form .button,
+.edit-review-form .button,
+.new-review-form .button {
+    background-color: #f26d13;
+    border: none;
+    height: 30px;
+}
+.sign-up-container .button:hover,
+.log-in-form .button:hover,
+.edit-user-form .button:hover,
+.edit-album-form .button:hover,
+.new-album-form .button:hover,
+.edit-review-form .button:hover,
+.new-review-form .button:hover {
+    cursor: pointer;
+}
+ 
+/* ---------------- Records Index ---------------------- */
 
 .index-records-container {
     display: flex;
@@ -112,7 +132,8 @@ main {
 /* ------------- Show Pages ------------------- */
 
 .show-records-container,
-.show-user-container {
+.show-user-container,
+.show-review-container {
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
@@ -121,30 +142,37 @@ main {
     align-items: center;
 }
 .show-records-container div,
-.show-user-container div { 
+.show-user-container div,
+.show-review-container .review-text { 
     text-align: center;
     color: white;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
 }
 .show-records-container div h1,
-.show-user-container div h1  {
+.show-user-container div h1,
+.show-review-container h1  {
     font-family: 'Epilogue', sans-serif;
     font-style: italic;
+}
+.show-review-container h1 {
+    color: white;
 }
 .show-records-image,
 .show-user-container img {
     width: 300px;
 }
 .show-records-container aside,
-.show-user-container aside  {
+.show-user-container aside,
+.show-review-container aside  {
     display: flex;
     flex-direction: column;
     height: 300px;
     justify-content: space-evenly;
 }
 .show-records-container .button,
-.show-user-container .button {
+.show-user-container .button,
+.show-review-container .button{
     background: linear-gradient(to top right, #94ecf7 45%, #f7d0f7 , #73f0be);
     padding: 20px;
     margin: 5px;
@@ -154,30 +182,29 @@ main {
     font-size: 18px;
 }
 .show-records-container .button:hover,
-.show-user-container .button:hover {
+.show-user-container .button:hover,
+.show-review-container .button:hover {
     cursor: pointer;
 }
-
-/* --------------- Reviews ----------------------- */
-
-.show-review-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 90%;
-}
-.show-review-container div {
+.show-review-container .review-text-and-buttons {
     flex: 2;
-}
-.show-review-container aside {
+    justify-content: space-between;
     display: flex;
-    flex-direction: column;
-    text-align: right;
+}
+.show-review-container .review-text {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+.show-review-container .review-buttons{
+    display: inherit;
 }
 
 
 @media all and (max-width: 1000px) {
+
 /* ------------- Layout Styles ------------------- */
+
     .nav-container {
         flex-wrap: wrap;
     }
@@ -187,7 +214,6 @@ main {
     .nav-container li {
         flex: 1 1 33.33333%;
     }
-
     .nav-container .nav-social {
         text-align: right;
     }
