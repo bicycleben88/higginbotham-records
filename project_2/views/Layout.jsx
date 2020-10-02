@@ -34,7 +34,7 @@ class Layout extends React.Component {
                     </header>
                     <main>{this.props.children}</main>
                     <footer>
-
+                        <a href="/auth/logout">Log Out</a>
                     </footer>
                 </body>
             </html>

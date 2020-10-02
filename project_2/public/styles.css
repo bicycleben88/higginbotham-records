@@ -120,20 +120,31 @@ main {
 
 .index-records-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     height: 100vh;
     margin: 0 auto;
     align-items: center;
     width: 90%;
+    flex-direction: column;
 }
-.index-records-images {
-    flex: 1;
+.index-large-records-container,
+.index-small-records-container {
+    display: flex;
+}
+.index-large-records-container {
+    order: -1;
+}
+.index-small-records-container {
+    align-items: flex-end;
+}
+.index-large-records-container img {
+    width: 300px;
     margin: 5px;
+    box-shadow: 3px 3px 5px black;
 }
-.index-records-container img {
-    max-width: 250px;
-    border: 2px solid aquamarine;
+.index-small-records-container img {
+    width: 100px;
 }
 
 /* ------------- Show Pages ------------------- */
@@ -144,7 +155,7 @@ main {
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
-    width: 90%;
+    width: 70%;
     height: 100vh;
     align-items: center;
 }
@@ -165,9 +176,13 @@ main {
 .show-review-container h1 {
     color: white;
 }
+.show-review-container .review-text-container{
+    flex: 1;
+}
 .show-records-image,
 .show-user-container img {
     width: 300px;
+    box-shadow: 3px 3px 5px black;
 }
 .show-records-container aside,
 .show-user-container aside,

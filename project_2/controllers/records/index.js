@@ -19,38 +19,46 @@ const recordsSeed = [
         albumTitle: 'Rumors',
         genre: 'Classic Rock',
         releaseDate: 'February 4th, 1977'
-    },
+    }, 
     {
         username: 'Ben',
-        albumArtwork: 'https://i.imgur.com/ObtFq7I.jpg',
-        artist: 'Jay-Z',
-        genre: 'Rap',
-        releaseDate: 'November 14th, 2003',
-        albumTitle: 'The Black Album'
-    },
-    {
-        username: 'Ben',
-        albumArtwork: 'https://i.imgur.com/55OjEXW.jpg',
-        artist: 'Nirvana',
+        albumArtwork: 'https://i.imgur.com/7CNMdae.png',
+        artist: 'Weezer',
+        albumTitle: 'The Blue Album',
         genre: 'Rock',
-        releaseDate: 'September 24th, 1991',
-        albumTitle: 'Nevermind'
+        releaseDate: 'May 10, 1994'
     },
     {
         username: 'Ben',
-        albumArtwork: 'https://i.imgur.com/svbZDZT.jpg',
-        artist: 'Garth Brooks',
-        genre: 'Country',
-        releaseDate: 'August 27th, 1990',
-        albumTitle: 'No Fences'
+        albumArtwork: 'https://i.imgur.com/s9fgRpe.jpg',
+        artist: 'Nas',
+        albumTitle: 'Illmatic',
+        genre: 'Rap',
+        releaseDate: 'April 19, 1994'
     },
     {
         username: 'Ben',
-        albumArtwork: 'https://i.imgur.com/dcVYHn8.jpg',
-        artist: 'The Prodigy',
-        genre: 'Techo',
-        releaseDate: 'June 30th, 1997',
-        albumTitle: 'The Fat of the Land'
+        albumArtwork: 'https://i.imgur.com/jzwwyu3.jpg',
+        artist: 'Britney Spears',
+        albumTitle: '...Baby One More Time',
+        genre: 'Pop',
+        releaseDate: 'January 12, 1999'
+    },
+    {
+        username: 'Ben',
+        albumArtwork: 'https://i.imgur.com/SCgZ9do.jpg',
+        artist: 'Michael Jackson',
+        albumTitle: 'Thriller',
+        genre: 'Pop',
+        releaseDate: 'February 4th, 1977'
+    },
+    {
+        username: 'Ben',
+        albumArtwork: 'https://i.imgur.com/1bzmMk4.jpg',
+        artist: 'Blink 182',
+        albumTitle: 'Enema of the State',
+        genre: 'Rock',
+        releaseDate: 'June 1, 1999'
     }
 ]
 

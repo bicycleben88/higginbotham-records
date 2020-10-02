@@ -10,20 +10,22 @@ class Show extends React.Component {
                     <aside>
                         <a href={`/reviews/new/${id}`}><button className="button">Add</button></a>
                     </aside>
+                    <div className="review-text-container">
                     {
                         reviews.map((review) => {
                             return <div className="review-text">
                                         <h3>Title: {review.title}</h3>
                                         <p>Review: {review.body}</p>
                                         <div className="review-buttons buttons">
-                                            <form action={`/reviews/${review._id}?_method=DELETE`} method="POST">
+                                            {/* <form action={`/reviews/${review._id}?_method=DELETE`} method="POST">
                                                 <input type="submit" defaultValue="Delete" className="button"/>
-                                            </form>
+                                            </form> */}
                                             <a href={`/reviews/edit/${review._id}`}><button className="button"> Edit</button></a>
                                         </div>
                                     </div>
                                 })
                     }
+                    </div>
                 </div>
             </Layout>
         );

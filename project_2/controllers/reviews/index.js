@@ -15,8 +15,10 @@ const router = Router();
 
 //New 
 router.get('/new/:id', auth, (req, res) => {  
+    console.log(req.session)
     res.render('reviews/new', {
-        id: req.params.id
+        albumId: req.params.id,
+        userId: req.session.userId
     });
 });
 //Destroy
@@ -53,12 +55,23 @@ router.post('/new/:id', auth, async (req, res) => {
 });
 //Edit
 router.get('/edit/:id', auth, async (req, res) => {
+    //check userId of logged-in user
+    console.log(`req.session.userId: ${req.session.userId}`);
     try {
         await Review.findById(req.params.id, (error, foundReview) => {
-            res.render('reviews/edit', { 
-                review: foundReview,
-                id: foundReview.bandId
-            });
+            console.log(foundReview);
+            //check user Id of user who orginally posted review
+            console.log(`foundReview.userID: ${foundReview.userID}`)
+            //if both user Ids match
+                //render Edit Review page
+            if (req.session.userId === foundReview.userId) {
+                res.render('reviews/edit', { 
+                    review: foundReview,
+                    bandId: req.params.id
+                });
+            } else {
+                res.render('auth/login2');
+            }
         });
     } catch (error) {
         console.log(error);
