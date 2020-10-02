@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200&display=swap');
+
 body {
     /* get background image to cover the entire page (i.e no white space) source = https://css-tricks.com/perfect-full-page-background-image/*/
     background: linear-gradient(to top right, #94ecf7 45%, #f7d0f7 , #73f0be) no-repeat center center fixed;
@@ -25,6 +27,13 @@ main {
     margin: 0;
     padding: 0;
     border: 1px solid black;
+    background: rgba(0, 0, 0, 0.4)
+}
+.nav-container h1 {
+    font-family: 'Epilogue', sans-serif;
+    font-style: italic;
+    color: white;
+    padding-left: 10px;
 }
 .nav-container li {
     flex: 1;
@@ -33,7 +42,24 @@ main {
     flex: 4;
 }
 .nav-container .nav-social img {
-    width: 50px;
+    width: 40px;
+    padding: 3px;
+}
+.nav-container .nav-social {
+    text-align: right;
+}
+.nav-container .nav-links {
+    text-align: center;
+    font-size: 1.25em;
+    line-height: 75px;
+}
+.nav-container .nav-links a {
+    color: white;
+    text-decoration: none;
+}
+.nav-container .nav-links:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
 }
 
 /* ----------- Form Styles ----------------- */

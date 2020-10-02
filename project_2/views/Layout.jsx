@@ -15,13 +15,13 @@ class Layout extends React.Component {
                                 <li className="nav-logo">
                                     <h1>Higginbotham Records</h1>
                                 </li>
-                                <li>
+                                <li className="nav-links">
                                     <a href="/auth/signup">Sign Up</a>
                                 </li>
-                                <li>
+                                <li className="nav-links">
                                     <a href="/auth/login">Log In</a>
                                 </li>
-                                <li>
+                                <li className="nav-links">
                                     <a href="/records">Home</a>
                                 </li>
                                 <li className="nav-social">
