@@ -17,11 +17,14 @@ router.get('/signup', (req, res) => {
 });
 //Create New User Post Request
 router.post('/signup', async (req, res) => {
+    if (req.body.image === '') {
+        req.body.image = 'https://i.imgur.com/zYfW33v.jpg'
+    }
     try {
         //Encrypt Password
         req.body.password = await bcrypt.hash(req.body.password, 10);
         //Save New User in DB
-        const newUser = await User.create(req.body);
+        const newUser = await User.create(req.body)
         res.redirect('/auth/login');
     } catch (error) {
         console.log(error) 

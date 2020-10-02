@@ -4,7 +4,6 @@ const Layout = require('../Layout');
 class Index extends React.Component {
     render() {
         const randomIndex = Math.floor(Math.random() * this.props.records.length);
-        console.log(randomIndex);
         const { records } = this.props;
         return (
             <Layout title="Higginbotham Records">

@@ -36,23 +36,23 @@ app.engine('jsx', require('express-react-views').createEngine());
 //------------------
 //Sessions allows use of req.session to track session data
 //Use for Heroku
-// app.use(
-//     session({
-//         secret: SECRET,
-//         resave: false,
-//         saveUninitialized: false,
-//         store: new mongoStore({ mongooseConnection: mongoose.connection }),
-//     })
-// );
-//Use for LocalHost
 app.use(
     session({
         secret: SECRET,
         resave: false,
-        saveUninitialized: true,
-        cookie: { secure: process.env.NODE_ENV === "production"},
+        saveUninitialized: false,
+        store: new mongoStore({ mongooseConnection: mongoose.connection }),
     })
 );
+//Use for LocalHost
+// app.use(
+//     session({
+//         secret: SECRET,
+//         resave: false,
+//         saveUninitialized: true,
+//         cookie: { secure: process.env.NODE_ENV === "production"},
+//     })
+// );
 app.use(express.static('public'));
 app.use(express.urlencoded( { extended: true }));
 app.use(methodOverride('_method'));

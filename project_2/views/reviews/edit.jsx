@@ -13,9 +13,9 @@ class Edit extends React.Component {
                         <input type="formfield" name="body" defaultValue={review.body}/>
                         <input type="submit" defaultValue="Edit Review" className="button"/>
                     </form>
-                    {/* <form action={`/reviews/${review._id}?_method=DELETE`} method="POST">
-                        <input type="submit" defaultValue="Delete" className="button"/>
-                    </form> */}
+                    <form action={`/reviews/${review._id}?_method=DELETE`} method="POST">
+                        <input type="submit" defaultValue="Delete" id="button"/>
+                    </form>
                 </div>
             </Layout>
         );
