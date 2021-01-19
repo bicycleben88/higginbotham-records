@@ -1,24 +1,68 @@
-const React = require('react');
-const Layout = require('../Layout');
+const React = require("react");
+const Layout = require("../Layout");
 
 class SignUp extends React.Component {
-    render() {
-        return (
-            <Layout title="Sign Up">
-                <div className="sign-up-container">
-                    <form action="/auth/signup" method="POST" className="sign-up-form">
-                        <input type="text" name="name" placeholder="Name"/>
-                        <input type="text" name="favoriteAlbum" placeholder="Favorite Album"/>
-                        <input type="text" name="image" placeholder="Image Url"/>
-                        <input type="text" name="username" placeholder="Username"/>
-                        <input type="text" name="password" placeholder="Password"/>
-                        <input type="submit" value="Create User" className="button"/>
-                    </form>
-                </div>
-
-            </Layout>
-        );
-    }
+  render() {
+    return (
+      <Layout title="Sign Up">
+        <form action="/auth/signup" method="POST">
+          <div className="mb-3">
+            <label for="name" className="form-label">
+              Name
+            </label>
+            <input type="text" className="form-control" name="name" id="name" />
+          </div>
+          <div className="mb-3">
+            <label for="favoriteAlbum" className="form-label">
+              Name
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              name="favoriteAlbum"
+              id="favoriteAlbum"
+            />
+          </div>
+          <div className="mb-3">
+            <label for="image" className="form-label">
+              Image
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              name="image"
+              id="image"
+            />
+          </div>
+          <div className="mb-3">
+            <label for="username" className="form-label">
+              Username
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              name="username"
+              id="username"
+            />
+          </div>
+          <div className="mb-3">
+            <label for="password" className="form-label">
+              Password
+            </label>
+            <input
+              type="password"
+              className="form-control"
+              name="password"
+              id="Password"
+            />
+          </div>
+          <button type="submit" className="btn btn-primary">
+            Create Profile
+          </button>
+        </form>
+      </Layout>
+    );
+  }
 }
 
-module.exports = SignUp
+module.exports = SignUp;
