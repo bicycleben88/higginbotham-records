@@ -3,14 +3,23 @@
 * {
   box-sizing: border-box;
   font-size: 10px;
+  --dark-blue: #022448;
+  --middle-blue: #55bdca;
+  --teal: #98ffff;
+  --light-blue: #c8eff9;
+  --orange: #f47d42;
 }
 html {
   width: 95%;
   margin: 0 auto;
 }
-
 body {
-  background: linear-gradient(to top right, #94ecf7 45%, #f7d0f7, #73f0be)
+  background: linear-gradient(
+      to top right,
+      var(--middle-blue) 45%,
+      var(--orange),
+      var(--dark-blue)
+    )
     no-repeat center center fixed;
   background-size: cover;
 }
@@ -20,67 +29,19 @@ main {
   background-position: center;
   margin: auto 0;
 }
-
-/* Flexbox code inspired by Wes Bos "What the FlexBox" lessons: https://flexbox.io */
-
-/* ---------Layout Styles---------------- */
-
-.header-wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 50px;
+nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem;
 }
-.nav-container {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border: 1px solid black;
-  background: rgba(0, 0, 0, 0.4);
-}
-.nav-container h1,
-.log-in-two-header {
+header h1 {
   font-family: "Epilogue", sans-serif;
-  font-style: italic;
-  color: white;
-  padding-left: 10px;
-}
-.log-in-two-header {
-  padding: 7px;
-  margin: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-.nav-container li {
-  flex: 1;
-}
-.nav-container .nav-logo {
-  flex: 4;
-}
-.nav-container .nav-social img {
-  width: 40px;
-  padding: 3px;
-}
-.nav-container .nav-social {
+  font-size: 4rem;
+  color: var(--light-blue);
   text-align: right;
-}
-.nav-container .nav-links {
-  text-align: center;
-  font-size: 1.25em;
-  line-height: 75px;
-}
-.nav-container .nav-links a {
-  color: white;
-  text-decoration: none;
-}
-.nav-container .nav-links:hover {
-  background-color: rgba(0, 0, 0, 0.6);
-  cursor: pointer;
 }
 
 /* ----------- Form Styles ----------------- */
 
-.sign-up-container,
-/* .log-in-container, */
 .edit-user-container,
 .edit-album-container,
 .new-album-container,
@@ -92,8 +53,6 @@ main {
   height: 70vh;
 }
 
-.sign-up-form,
-/* .log-in-form, */
 .edit-user-form,
 .edit-album-form,
 .new-album-form,
@@ -103,8 +62,7 @@ main {
   border: 20px solid rgba(0, 0, 0, 0.6);
   border-radius: 5px;
 }
-.sign-up-container .button,
-/* .log-in-form .button, */
+
 .edit-user-form .button,
 .edit-album-form .button,
 .new-album-form .button,
@@ -124,8 +82,7 @@ main {
   width: 100px;
   font-size: 18px;
 }
-.sign-up-container .button:hover,
-/* .log-in-form .button:hover, */
+
 .edit-user-form .button:hover,
 .edit-album-form .button:hover,
 .new-album-form .button:hover,
@@ -138,6 +95,9 @@ form {
   color: white;
   padding: 0.5rem;
   font-size: 2rem;
+}
+form > button:hover {
+  cursor: pointer;
 }
 /* ---------------- Records Index ---------------------- */
 
@@ -280,6 +240,10 @@ form {
   form {
     width: 60%;
     margin: 0 auto;
+  }
+  header h1 {
+    text-align: left;
+    color: var(--dark-blue);
   }
 }
 @media all and (max-width: 700px) {

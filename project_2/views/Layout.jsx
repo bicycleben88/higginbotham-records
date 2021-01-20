@@ -18,35 +18,24 @@ class Layout extends React.Component {
         </head>
         <body>
           <header>
-            <div className="header-wrapper">
-              <ul className="nav-container">
-                <li className="nav-logo">
-                  <h1>Higginbotham Records</h1>
-                </li>
-                <li className="nav-links">
-                  <a href="/auth/signup">Sign Up</a>
-                </li>
-                <li className="nav-links">
-                  <a href="/auth/login">Log In</a>
-                </li>
-                <li className="nav-links">
-                  <a href="/records">Home</a>
-                </li>
-                <li className="nav-social">
-                  <a href="https://www.linkedin.com/in/benjamin-alt-higginbotham/">
-                    <img src="/images/linkedin_icon.png" alt="linked in icon" />
-                  </a>
-                  <a href="https://github.com/bicycleben88">
-                    <img src="/images/git_icon.png" alt="git hub icon" />
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <h1>Higginbotham Records</h1>
+            <nav className="navbar justify-content-center">
+              <a href="/auth/signup" className="nav-link">
+                Sign Up
+              </a>
+              <a href="/auth/login" className="nav-link">
+                Log In
+              </a>
+              <a href="/records" className="nav-link">
+                Home
+              </a>
+              <a href="/auth/logout" className="nav-link">
+                Log Out
+              </a>
+            </nav>
           </header>
           <main>{this.props.children}</main>
-          <footer>
-            <a href="/auth/logout">Log Out</a>
-          </footer>
+          <footer></footer>
         </body>
       </html>
     );
