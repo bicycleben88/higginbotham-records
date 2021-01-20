@@ -19,7 +19,7 @@ class Layout extends React.Component {
         <body>
           <header>
             <h1>Higginbotham Records</h1>
-            <nav className="navbar justify-content-center">
+            <nav className="navbar">
               <a href="/auth/signup" className="nav-link">
                 Sign Up
               </a>
