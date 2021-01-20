@@ -34,8 +34,23 @@ class Layout extends React.Component {
               </a>
             </nav>
           </header>
-          <main>{this.props.children}</main>
-          <footer></footer>
+          <main className="container">{this.props.children}</main>
+          <footer className="navbar justify-content-end">
+            <a
+              href="https://my-portfolio.benjamin-higginbotham.vercel.app/"
+              target="#"
+              className="nav-link"
+            >
+              Folio
+            </a>
+            <a
+              href="https://www.linkedin.com/in/benjamin-alt-higginbotham/"
+              target="#"
+              className="nav-link"
+            >
+              /in
+            </a>
+          </footer>
         </body>
       </html>
     );

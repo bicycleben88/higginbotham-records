@@ -16,18 +16,31 @@ html {
 body {
   background: linear-gradient(
       to top right,
-      var(--middle-blue) 45%,
-      var(--orange),
-      var(--dark-blue)
+      var(--light-blue) 30%,
+      var(--teal) 35%,
+      var(--middle-blue) 50%,
+      var(--dark-blue),
+      var(--orange)
     )
     no-repeat center center fixed;
   background-size: cover;
+  min-height: 100vh;
 }
-main {
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: url("/images/record_store.jpg");
   background-repeat: no-repeat;
   background-position: center;
   margin: auto 0;
+  min-height: 80vh;
+}
+header {
+  min-height: 15vh;
+}
+footer {
+  min-height: 5vh;
 }
 nav {
   background-color: rgba(0, 0, 0, 0.7);
@@ -247,10 +260,6 @@ form > button:hover {
   }
 }
 @media all and (max-width: 700px) {
-  .nav-container li {
-    flex-basis: 100%;
-  }
-  /* ---------------- Show Page ----------------- */
   .show-records-container,
   .show-user-container {
     justify-content: center;
