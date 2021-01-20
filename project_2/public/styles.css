@@ -28,29 +28,41 @@ body {
 }
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image: url("/images/record_store.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  margin: auto 0;
+  margin: 0 auto;
   min-height: 80vh;
 }
 header {
   min-height: 15vh;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 footer {
   min-height: 5vh;
 }
-nav {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 0.5rem;
+.navbar {
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.nav-link {
+  font-size: 1.3rem;
+  color: var(--teal);
+  padding: 0 1rem;
+}
+.nav-link:hover {
+  background-color: var(--orange);
+  color: var(--light-blue);
 }
 header h1 {
   font-family: "Epilogue", sans-serif;
   font-size: 4rem;
   color: var(--light-blue);
-  text-align: right;
+  text-align: center;
 }
 
 /* ----------- Form Styles ----------------- */
@@ -113,41 +125,18 @@ form > button:hover {
   cursor: pointer;
 }
 /* ---------------- Records Index ---------------------- */
-
-.index-records-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  height: 100vh;
-  margin: 0 auto;
-  align-items: center;
-  max-width: 90%;
-  flex-direction: column;
-}
-.index-large-records-container,
-.index-small-records-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-.index-large-records-container {
-  order: -1;
-}
-.index-small-records-container {
-  align-items: flex-end;
-}
-.index-large-records-container img {
-  width: 300px;
-  margin: 5px;
-  box-shadow: 3px 3px 5px black;
-}
-.index-small-records-container .index-records-small-images,
-.index-small-records-container .index-records-small-images img {
-  width: 100px;
+#index-card {
+  margin: 0.2rem;
 }
 
 /* ------------- Show Pages ------------------- */
 
-.show-records-container,
+.card {
+  width: 300px;
+}
+.card .btn {
+  margin: 0.2rem;
+}
 .show-user-container,
 .show-review-container {
   display: flex;
@@ -157,7 +146,7 @@ form > button:hover {
   height: 100vh;
   align-items: center;
 }
-.show-records-container div,
+
 .show-user-container div,
 .show-review-container .review-text {
   text-align: center;
@@ -165,7 +154,7 @@ form > button:hover {
   background: rgba(0, 0, 0, 0.5);
   padding: 10px;
 }
-.show-records-container div h1,
+
 .show-user-container div h1,
 .show-review-container h1 {
   font-family: "Epilogue", sans-serif;
@@ -177,12 +166,12 @@ form > button:hover {
 .show-review-container .review-text-container {
   flex: 1;
 }
-.show-records-image,
+
 .show-user-container img {
   width: 300px;
   box-shadow: 3px 3px 5px black;
 }
-.show-records-container aside,
+
 .show-user-container aside,
 .show-review-container aside {
   display: flex;
@@ -190,7 +179,7 @@ form > button:hover {
   height: 300px;
   justify-content: space-evenly;
 }
-.show-records-container .button,
+
 .show-user-container .button,
 .show-review-container .button {
   background: linear-gradient(to top right, #94ecf7 45%, #f7d0f7, #73f0be);
@@ -221,26 +210,9 @@ form > button:hover {
 }
 
 @media all and (max-width: 1000px) {
-  /* ------------- Layout Styles ------------------- */
-
-  .nav-container {
-    flex-wrap: wrap;
-  }
-  .nav-container .nav-logo {
-    flex: 1 1 100%;
-  }
-  .nav-container li {
-    flex: 1 1 33.33333%;
-  }
-  .nav-container .nav-social {
-    text-align: right;
-  }
-  /* ------------------- Show Pages ------------------------  */
-  .show-records-container,
   .show-user-container {
     flex-wrap: wrap;
   }
-  .show-records-container aside,
   .show-user-container aside {
     flex-direction: row;
     flex: 1;
@@ -250,25 +222,40 @@ form > button:hover {
 }
 
 @media (min-width: 500px) {
+  .nav-link {
+    font-size: 2rem;
+  }
   form {
     width: 60%;
     margin: 0 auto;
   }
+}
+@media (min-width: 800px) {
+  .navbar {
+    justify-content: flex-start;
+  }
   header h1 {
     text-align: left;
-    color: var(--dark-blue);
+    font-size: 6rem;
+    padding-left: 0.5rem;
   }
-}
-@media all and (max-width: 700px) {
-  .show-records-container,
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #index-card {
+    opacity: 0.4;
+  }
+  #index-card:hover {
+    opacity: 1;
+    z-index: 1;
+  }
   .show-user-container {
     justify-content: center;
   }
-  .show-records-container div,
   .show-user-container div {
     order: -2;
   }
-  .show-records-container aside,
   .show-user-container aside {
     order: -1;
   }
