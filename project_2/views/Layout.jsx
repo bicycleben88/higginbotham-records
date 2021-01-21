@@ -71,8 +71,8 @@ class Layout extends React.Component {
                   className="navbar-brand d-flex align-items-center"
                 >
                   <img
-                    width="20"
-                    height="20"
+                    width="25"
+                    height="25"
                     className="me-2"
                     src="/record-icon.png"
                   />
@@ -117,6 +117,17 @@ class Layout extends React.Component {
                       Create a New Album
                     </a>
                   </p>
+                  <div>
+                    <a href="/auth/logout" className="text-danger px-1">
+                      Log Out
+                    </a>
+                    <a
+                      href={`/user/${this.props.userId}`}
+                      className="text-secondary px-1"
+                    >
+                      Profile
+                    </a>
+                  </div>
                 </div>
               </div>
             </section>

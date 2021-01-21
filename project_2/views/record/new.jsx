@@ -4,7 +4,7 @@ const Layout = require("../Layout");
 class New extends React.Component {
   render() {
     return (
-      <Layout title="Add New Album">
+      <Layout title="Add New Album" userId={this.props.id}>
         <div className="container">
           <form action={`/records/new`} method="POST">
             <div className="row">

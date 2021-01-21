@@ -3,9 +3,9 @@ const Layout = require("../Layout");
 
 class Index extends React.Component {
   render() {
-    const { records } = this.props;
+    const { records, id } = this.props;
     return (
-      <Layout title="Higginbotham Records">
+      <Layout title="Higginbotham Records" userId={id}>
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           {records.map((record) => {
             return (

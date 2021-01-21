@@ -1,11 +1,11 @@
 // Dependencies
-
 const { Router } = require("express");
 const Record = require("../../models/records");
 const auth = require("../../controllers/authmiddleware");
 
 const router = Router();
 
+let id = undefined;
 const recordsSeed = [
   {
     username: "Ben",
@@ -63,8 +63,12 @@ const recordsSeed = [
 router.get("/", async (req, res) => {
   try {
     await Record.find({}, (error, records) => {
+      if (req.session.userId) {
+        id = req.session.userId;
+      }
       res.render("record/index", {
         records: records,
+        id: id,
       });
     });
   } catch (error) {
@@ -83,7 +87,12 @@ router.get("/seed", async (req, res) => {
 });
 //New
 router.get("/new", auth, (req, res) => {
-  res.render("record/new");
+  if (req.session.userId) {
+    id = req.session.userId;
+  }
+  res.render("record/new", {
+    id: id,
+  });
 });
 //Destroy
 router.delete("/:id", auth, async (req, res) => {
@@ -126,6 +135,7 @@ router.get("/edit/:id", auth, async (req, res) => {
     await Record.findById(req.params.id, (error, foundRecord) => {
       res.render("record/edit", {
         record: foundRecord,
+        id: id,
       });
     });
   } catch (error) {
@@ -138,6 +148,7 @@ router.get("/:id", async (req, res) => {
     await Record.findById(req.params.id, (error, foundRecord) => {
       res.render("record/show", {
         record: foundRecord,
+        id: id,
       });
     });
   } catch (error) {
