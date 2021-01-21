@@ -64,7 +64,7 @@ class Layout extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="navbar navbar-dark bg-dark shadow-sm">
+            <div className="navbar navbar-dark bg-danger shadow-sm">
               <div className="container">
                 <a
                   href="/records"
@@ -103,19 +103,16 @@ class Layout extends React.Component {
                   <p>
                     <a
                       href="/auth/signup"
-                      className="btn btn-outline-secondary my-2"
+                      className="btn btn-outline-dark my-2"
                     >
                       Sign Up
                     </a>{" "}
-                    <a
-                      href="/auth/login"
-                      className="btn btn-outline-secondary my-2"
-                    >
+                    <a href="/auth/login" className="btn btn-outline-dark my-2">
                       Login
                     </a>{" "}
                     <a
                       href="/records/new"
-                      className="btn btn-outline-primary my-2"
+                      className="btn btn-outline-danger my-2"
                     >
                       Create a New Album
                     </a>
@@ -123,7 +120,9 @@ class Layout extends React.Component {
                 </div>
               </div>
             </section>
-            <article className="container-fluid">{this.props.children}</article>
+            <article className="album py-5 bg-light">
+              <div className="container">{this.props.children}</div>
+            </article>
           </main>
           <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"

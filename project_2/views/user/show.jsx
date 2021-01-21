@@ -6,7 +6,7 @@ class Show extends React.Component {
     const { user } = this.props;
     return (
       <Layout title={user.name}>
-        <div className="container">
+        <div className="col">
           <div className="card">
             <img src={user.image} alt={user.name} className="card-img-top" />
             <div className="card-body">

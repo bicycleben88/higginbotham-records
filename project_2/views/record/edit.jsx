@@ -75,7 +75,7 @@ class Edit extends React.Component {
                 defaultValue={record.albumArtwork}
               />
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-danger">
               Update Album
             </button>
           </form>
