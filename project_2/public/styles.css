@@ -9,99 +9,14 @@
   --light-blue: #c8eff9;
   --orange: #f47d42;
 }
-html {
-  width: 95%;
-  margin: 0 auto;
+main {
+  background-color: var(--light-blue);
 }
-body {
-  background: linear-gradient(
-      to top right,
-      var(--light-blue) 30%,
-      var(--teal) 35%,
-      var(--middle-blue) 50%,
-      var(--dark-blue),
-      var(--orange)
-    )
-    no-repeat center center fixed;
-  background-size: cover;
-  min-height: 100vh;
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url("/images/record_store.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: 0 auto;
-  min-height: 80vh;
-}
-header {
-  min-height: 15vh;
-  background-color: rgba(0, 0, 0, 0.7);
+main article {
+  background-color: var(--middle-blue);
 }
 footer {
   min-height: 5vh;
-}
-.navbar {
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-}
-.nav-link {
-  font-size: 1.3rem;
-  color: var(--teal);
-  padding: 0 1rem;
-}
-.nav-link:hover {
-  background-color: var(--orange);
-  color: var(--light-blue);
-}
-header h1 {
-  font-family: "Epilogue", sans-serif;
-  font-size: 4rem;
-  color: var(--light-blue);
-  text-align: center;
-}
-
-/* ----------- Form Styles ----------------- */
-
-.edit-review-container,
-.new-review-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70vh;
-}
-
-.edit-review-form,
-.new-review-form {
-  display: flex;
-  border: 20px solid rgba(0, 0, 0, 0.6);
-  border-radius: 5px;
-}
-
-.edit-review-form .button,
-.new-review-form .button {
-  background-color: #f26d13;
-  border: none;
-  height: 30px;
-}
-.edit-review-container #button {
-  cursor: pointer;
-  background: linear-gradient(to top right, #94ecf7 45%, #f7d0f7, #73f0be);
-  padding: 20px;
-  margin: 5px;
-  border: none;
-  border-radius: 50%;
-  width: 100px;
-  font-size: 18px;
-}
-
-.edit-review-form .button:hover,
-.new-review-form .button:hover {
-  cursor: pointer;
 }
 form {
   background-color: rgba(0, 0, 0, 0.4);
@@ -112,103 +27,15 @@ form {
 form > button:hover {
   cursor: pointer;
 }
-/* ---------------- Records Index ---------------------- */
 #index-card {
   margin: 0.2rem;
 }
-
-/* ------------- Show Pages ------------------- */
-
 .card {
   width: 300px;
 }
 .card .btn {
   margin: 0.2rem;
 }
-.show-user-container,
-.show-review-container {
-  display: flex;
-  margin: 0 auto;
-  justify-content: space-between;
-  width: 75%;
-  height: 100vh;
-  align-items: center;
-}
-
-.show-user-container div,
-.show-review-container .review-text {
-  text-align: center;
-  color: white;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-}
-
-.show-user-container div h1,
-.show-review-container h1 {
-  font-family: "Epilogue", sans-serif;
-  font-style: italic;
-}
-.show-review-container h1 {
-  color: white;
-}
-.show-review-container .review-text-container {
-  flex: 1;
-}
-
-.show-user-container img {
-  width: 300px;
-  box-shadow: 3px 3px 5px black;
-}
-
-.show-user-container aside,
-.show-review-container aside {
-  display: flex;
-  flex-direction: column;
-  height: 300px;
-  justify-content: space-evenly;
-}
-
-.show-user-container .button,
-.show-review-container .button {
-  background: linear-gradient(to top right, #94ecf7 45%, #f7d0f7, #73f0be);
-  padding: 20px;
-  margin: 5px;
-  border: none;
-  border-radius: 50%;
-  width: 100px;
-  font-size: 18px;
-}
-.show-records-container .button:hover,
-.show-user-container .button:hover,
-.show-review-container .button:hover {
-  cursor: pointer;
-}
-.show-review-container .review-text-and-buttons {
-  flex: 2;
-  justify-content: space-between;
-  display: flex;
-}
-.show-review-container .review-text {
-  display: flex;
-  flex: 1;
-  justify-content: space-between;
-}
-.show-review-container .review-buttons {
-  display: inherit;
-}
-
-@media all and (max-width: 1000px) {
-  .show-user-container {
-    flex-wrap: wrap;
-  }
-  .show-user-container aside {
-    flex-direction: row;
-    flex: 1;
-    margin-top: 10px;
-    height: 125px;
-  }
-}
-
 @media (min-width: 500px) {
   .nav-link {
     font-size: 2rem;
@@ -219,32 +46,11 @@ form > button:hover {
   }
 }
 @media (min-width: 800px) {
-  .navbar {
-    justify-content: flex-start;
-  }
-  header h1 {
-    text-align: left;
-    font-size: 6rem;
-    padding-left: 0.5rem;
-  }
-  .container {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
   #index-card {
     opacity: 0.4;
   }
   #index-card:hover {
     opacity: 1;
     z-index: 1;
-  }
-  .show-user-container {
-    justify-content: center;
-  }
-  .show-user-container div {
-    order: -2;
-  }
-  .show-user-container aside {
-    order: -1;
   }
 }

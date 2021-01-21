@@ -22,9 +22,6 @@ class Show extends React.Component {
           <a href={`edit/${record._id}`} className="btn btn-primary">
             Edit
           </a>
-          <a href={`/reviews/${record._id}`} className="btn btn-primary">
-            Review
-          </a>
           <a
             href={`/records/${record._id}?_method=DELETE`}
             className="btn btn-primary"

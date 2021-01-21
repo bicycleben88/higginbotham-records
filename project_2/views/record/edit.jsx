@@ -26,7 +26,7 @@ class Edit extends React.Component {
               </div>
               <div className="mb-3 col">
                 <label for="albumTitle" className="form-label">
-                  ALbum Title
+                  Album Title
                 </label>
                 <input
                   type="text"
