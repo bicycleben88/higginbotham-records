@@ -3,9 +3,9 @@ const Layout = require("../Layout");
 
 class Edit extends React.Component {
   render() {
-    const { user } = this.props;
+    const { user, id } = this.props;
     return (
-      <Layout>
+      <Layout userId={id}>
         <div className="container">
           <form action={`/user/edit/${user._id}?_method=PUT`} method="POST">
             <div className="mb-3 col">

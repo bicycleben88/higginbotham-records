@@ -2,7 +2,6 @@
 const { Router } = require("express");
 const bcrypt = require("bcryptjs");
 const User = require("../../models/auth");
-
 const router = Router();
 
 // Routes

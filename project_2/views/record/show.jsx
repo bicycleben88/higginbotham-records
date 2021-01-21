@@ -3,9 +3,9 @@ const Layout = require("../Layout");
 
 class Show extends React.Component {
   render() {
-    const { record } = this.props;
+    const { record, id } = this.props;
     return (
-      <Layout title={record.albumTitle}>
+      <Layout title={record.albumTitle} userId={id}>
         <div className="d-flex justify-content-center">
           <div className="card" style={{ maxWidth: "20rem" }}>
             <h2 className="card-header bg-dark text-white">
@@ -13,7 +13,7 @@ class Show extends React.Component {
             </h2>
             <img
               src={record.albumArtwork}
-              alt="Album Artwork"
+              alt={record.albumTitle}
               className="card-img-top"
             />
             <div className="card-body">
