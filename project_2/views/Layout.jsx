@@ -18,39 +18,118 @@ class Layout extends React.Component {
         </head>
         <body>
           <header>
-            <h1>Higginbotham Records</h1>
-            <nav className="navbar">
-              <a href="/auth/signup" className="nav-link">
-                Sign Up
-              </a>
-              <a href="/auth/login" className="nav-link">
-                Log In
-              </a>
-              <a href="/records" className="nav-link">
-                Home
-              </a>
-              <a href="/auth/logout" className="nav-link">
-                Log Out
-              </a>
-            </nav>
+            <div className="collapse bg-dark" id="navbarHeader">
+              <div className="container">
+                <div className="row">
+                  <div className="col-sm-8 col-m-7 py-4">
+                    <h4 className="text-white">About</h4>
+                    <p className="text-muted">
+                      This is a FullStack Application using the MongoDB,
+                      Express, React, Node (MERN) stack. It's full CRUD using
+                      RESTful routes.
+                    </p>
+                  </div>
+                  <div className="col-sm-4 py-4">
+                    <h4 className="text-white">Contact</h4>
+                    <ul className="list-unstyled">
+                      <li>
+                        <a
+                          href="https://www.linkedin.com/in/benjamin-alt-higginbotham/"
+                          target="#"
+                          className="text-white"
+                        >
+                          /in
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://my-portfolio.benjamin-higginbotham.vercel.app/"
+                          target="#"
+                          className="text-white"
+                        >
+                          Folio
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://github.com/bicycleben88"
+                          target="#"
+                          className="text-white"
+                        >
+                          Git
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="navbar navbar-dark bg-dark shadow-sm">
+              <div className="container">
+                <a
+                  href="/records"
+                  className="navbar-brand d-flex align-items-center"
+                >
+                  <img
+                    width="20"
+                    height="20"
+                    className="me-2"
+                    src="/record-icon.png"
+                  />
+                  <strong>Records</strong>
+                </a>
+                <button
+                  className="navbar-toggler collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarHeader"
+                  aria-expanded="false"
+                  aria-label="Toggle Navigation"
+                >
+                  <span className="navbar-toggler-icon"></span>
+                </button>
+              </div>
+            </div>
           </header>
-          <main className="container">{this.props.children}</main>
-          <footer className="navbar justify-content-end">
-            <a
-              href="https://my-portfolio.benjamin-higginbotham.vercel.app/"
-              target="#"
-              className="nav-link"
-            >
-              Folio
-            </a>
-            <a
-              href="https://www.linkedin.com/in/benjamin-alt-higginbotham/"
-              target="#"
-              className="nav-link"
-            >
-              /in
-            </a>
-          </footer>
+          <main>
+            <section className="container text-center py-5">
+              <div className="row py-lg-5">
+                <div className="col-lg-6 col-md-8 mx-auto">
+                  <h1 className="fw-light">Higginbotham Records</h1>
+                  <p className="lead text-muted">
+                    When You're on the Run with Your Records in Tow. To Create,
+                    Read, Update, or Delete Sign Up Below
+                  </p>
+                  <p>
+                    <a
+                      href="/auth/signup"
+                      className="btn btn-outline-secondary my-2"
+                    >
+                      Sign Up
+                    </a>{" "}
+                    <a
+                      href="/auth/login"
+                      className="btn btn-outline-secondary my-2"
+                    >
+                      Login
+                    </a>{" "}
+                    <a
+                      href="/records/new"
+                      className="btn btn-outline-primary my-2"
+                    >
+                      Create a New Album
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </section>
+            <article className="container-fluid">{this.props.children}</article>
+          </main>
+          <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"
+          ></script>
         </body>
       </html>
     );
