@@ -6,19 +6,40 @@ class Index extends React.Component {
     const { records } = this.props;
     return (
       <Layout title="Higginbotham Records">
-        <div className="container">
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           {records.map((record) => {
             return (
-              <div className="card" id="index-card">
-                <a href={`/records/${record._id}`}>
-                  <img
-                    src={record.albumArtwork}
-                    alt={record.albumTitle}
-                    className="img-thumbnail"
-                  />
-                </a>
-                <div className="card-body">
-                  <h3>{record.albumTitle}</h3>
+              <div className="col">
+                <div className="card shadow-sm" id="index-card">
+                  <a href={`/records/${record._id}`}>
+                    <img
+                      src={record.albumArtwork}
+                      alt={record.albumTitle}
+                      className="card-img-top img-thumbnail"
+                    />
+                  </a>
+                  <div className="card-body">
+                    <p className="card-text">
+                      <strong>{record.albumTitle}</strong> is an album by{" "}
+                      <strong>{record.artist}</strong>
+                    </p>
+                    <div className="btn-group">
+                      <a
+                        href={`/records/${record._id}`}
+                        type="button"
+                        className="btn btn-sm btn-outline-dark"
+                      >
+                        View
+                      </a>
+                      <a
+                        href={`/records/edit/${record._id}`}
+                        type="button"
+                        className="btn btn-sm btn-outline-danger"
+                      >
+                        Edit
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             );

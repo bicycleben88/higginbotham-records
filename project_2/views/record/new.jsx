@@ -66,7 +66,7 @@ class New extends React.Component {
                 className="form-control"
               />
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-danger">
               Add Album
             </button>
           </form>

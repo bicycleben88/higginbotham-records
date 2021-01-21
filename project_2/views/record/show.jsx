@@ -6,31 +6,44 @@ class Show extends React.Component {
     const { record } = this.props;
     return (
       <Layout title={record.albumTitle}>
-        <div className="card">
-          <img
-            src={record.albumArtwork}
-            alt="Album Artwork"
-            className="card-img-top"
-          />
-          <div className="card-body">
-            <h4>{record.artist}: </h4>
-            <h1>{record.albumTitle}</h1>
-            <h4>Genre: {record.genre}</h4>
-            <h4>Release: {record.releaseDate}</h4>
-          </div>
-
-          <a href={`edit/${record._id}`} className="btn btn-primary">
-            Edit
-          </a>
-          <a
-            href={`/records/${record._id}?_method=DELETE`}
-            className="btn btn-primary"
-          >
-            Delete
-          </a>
-          {/* <form action={`/records/${record._id}?_method=DELETE`} method="POST">
+        <div className="d-flex justify-content-center">
+          <div className="card" style={{ maxWidth: "20rem" }}>
+            <h2 className="card-header bg-dark text-white">
+              {record.albumTitle}
+            </h2>
+            <img
+              src={record.albumArtwork}
+              alt="Album Artwork"
+              className="card-img-top"
+            />
+            <div className="card-body">
+              <p className="card-text">
+                On {record.releaseDate}, {record.artist} dropped a great{" "}
+                {record.genre} album. The world was never the same!
+              </p>
+              <div className="d-flex">
+                <div className="btn-group">
+                  <a
+                    href={`/records/edit/${record._id}`}
+                    type="button"
+                    className="btn btn-sm btn-outline-dark"
+                  >
+                    Edit
+                  </a>
+                  <a
+                    href={`/records/${record._id}?_method=DELETE`}
+                    type="button"
+                    className="btn btn-sm btn-outline-danger"
+                  >
+                    Delete
+                  </a>
+                </div>
+              </div>
+            </div>
+            {/* <form action={`/records/${record._id}?_method=DELETE`} method="POST">
                                 <button type="submit" id="delete" className="btn btn-primaty">Delete</button>
-                            </form> */}
+                              </form> */}
+          </div>
         </div>
       </Layout>
     );

@@ -44,7 +44,7 @@ class Edit extends React.Component {
                 className="form-control"
               />
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-danger">
               Submit
             </button>
           </form>

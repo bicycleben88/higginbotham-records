@@ -65,7 +65,7 @@ class SignUp extends React.Component {
               />
             </div>
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-danger">
             Create Profile
           </button>
         </form>
