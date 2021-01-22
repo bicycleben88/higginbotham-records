@@ -14,17 +14,16 @@ class Show extends React.Component {
               <p className="card-text">
                 My favorite album is {user.favoriteAlbum}
               </p>
-              <div className="btn-group">
-                <a href={`edit/${user._id}`} className="btn btn-outline-dark">
-                  Edit
-                </a>
-                <a
-                  href={`/user/${user._id}?_method=DELETE`}
-                  className="btn btn-outline-danger"
-                >
-                  Delete
-                </a>
-              </div>
+              <form action={`/user/${user._id}?_method=DELETE`} method="POST">
+                <div className="btn-group">
+                  <a href={`edit/${user._id}`} className="btn btn-outline-dark">
+                    Edit
+                  </a>
+                  <button type="submit" className="btn btn-outline-danger">
+                    Delete
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

@@ -24,9 +24,10 @@ class Layout extends React.Component {
                   <div className="col-sm-8 col-m-7 py-4">
                     <h4 className="text-white">About</h4>
                     <p className="text-muted">
-                      This is a FullStack Application using the MongoDB,
-                      Express, React, Node (MERN) stack. It's full CRUD using
-                      RESTful routes.
+                      This Full-Stack Application is built with a MongoDB,
+                      Express, React & Node (MERN) stack. It follows MVC design
+                      pattern, features full CRUD capabilities & secures user
+                      content with BCrypt
                     </p>
                   </div>
                   <div className="col-sm-4 py-4">
@@ -74,6 +75,7 @@ class Layout extends React.Component {
                     width="25"
                     height="25"
                     className="me-2"
+                    style={{ borderRadius: "3px" }}
                     src="/record-icon.png"
                   />
                   <strong>Records</strong>
@@ -123,7 +125,7 @@ class Layout extends React.Component {
                     </a>
                     <a
                       href={`/user/${this.props.userId}`}
-                      className="text-secondary px-1"
+                      className="text-dark px-1"
                     >
                       Profile
                     </a>
@@ -135,6 +137,25 @@ class Layout extends React.Component {
               <div className="container">{this.props.children}</div>
             </article>
           </main>
+          <footer className="text-secondary py-5">
+            <div className="container">
+              <p className="float-end mb-2">
+                <a href="#" className="text-dark">
+                  Back to Top
+                </a>
+              </p>
+              <p className="mb-2">
+                Layout & Theme inspired by{" "}
+                <a
+                  href="https://getbootstrap.com/docs/5.0/examples/album/#"
+                  target="#"
+                >
+                  {" "}
+                  &#169; Bootstrap
+                </a>
+              </p>
+            </div>
+          </footer>
           <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"

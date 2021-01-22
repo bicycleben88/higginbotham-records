@@ -11,6 +11,7 @@ const router = Router();
 router.delete("/:id", auth, async (req, res) => {
   try {
     await User.findByIdAndDelete(req.params.id, (error, foundUser) => {
+      req.session.destroy();
       res.redirect("/");
     });
   } catch {
@@ -44,12 +45,19 @@ router.get("/edit/:id", auth, async (req, res) => {
 });
 //Show
 router.get("/:id", auth, async (req, res) => {
+  if (req.params.id === undefined) {
+    res.redirect("auth/login");
+  }
   try {
     await User.findById(req.params.id, (error, foundUser) => {
-      res.render("user/show", {
-        user: foundUser,
-        id: req.params.id,
-      });
+      if (foundUser) {
+        res.render("user/show", {
+          user: foundUser,
+          id: req.params.id,
+        });
+      } else {
+        res.redirect("/auth/login");
+      }
     });
   } catch (error) {
     console.log(error);
