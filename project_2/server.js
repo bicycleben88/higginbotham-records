@@ -33,12 +33,12 @@ app.use(
 );
 //Use for LocalHost
 // app.use(
-//     session({
-//         secret: SECRET,
-//         resave: false,
-//         saveUninitialized: true,
-//         cookie: { secure: process.env.NODE_ENV === "production"},
-//     })
+//   session({
+//     secret: SECRET,
+//     resave: false,
+//     saveUninitialized: true,
+//     cookie: { secure: process.env.NODE_ENV === "production" },
+//   })
 // );
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));

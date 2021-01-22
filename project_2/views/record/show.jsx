@@ -21,7 +21,10 @@ class Show extends React.Component {
                 On {record.releaseDate}, {record.artist} dropped a great{" "}
                 {record.genre} album. The world was never the same!
               </p>
-              <div className="d-flex">
+              <form
+                action={`/records/${record._id}?_method=DELETE`}
+                method="POST"
+              >
                 <div className="btn-group">
                   <a
                     href={`/records/edit/${record._id}`}
@@ -30,15 +33,14 @@ class Show extends React.Component {
                   >
                     Edit
                   </a>
-                  <a
-                    href={`/records/${record._id}?_method=DELETE`}
-                    type="button"
+                  <button
+                    type="submit"
                     className="btn btn-sm btn-outline-danger"
                   >
                     Delete
-                  </a>
+                  </button>
                 </div>
-              </div>
+              </form>
             </div>
             {/* <form action={`/records/${record._id}?_method=DELETE`} method="POST">
                                 <button type="submit" id="delete" className="btn btn-primaty">Delete</button>
