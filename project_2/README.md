@@ -4,7 +4,7 @@
 >
 > https://higginbotham-records.herokuapp.com/
 
-![Landing page to Higginbotham Records](https://i.imgur.com/uKrGuF2.png)
+![Landing page to Higginbotham Records](https://i.imgur.com/pv01sLr.png)
 
 ## Technologies Used:
 
@@ -20,7 +20,7 @@
 
 > - CRUD record collection
 > - CRUD users
-> - CRUD user's reviews of records
+> - Mobile-first Design w/ Bootstrap
 
 ## Stretch:
 
