@@ -15,6 +15,7 @@ const testRouter = require("./controllers/test");
 const recordRouter = require("./controllers/records");
 const userRouter = require("./controllers/user");
 const reviewRouter = require("./controllers/reviews");
+const drumRouter = require("./controllers/drum");
 
 //View Engine
 app.set("view engine", "jsx");
@@ -55,6 +56,7 @@ app.use("/test", testRouter);
 app.use("/records", recordRouter);
 app.use("/user", userRouter);
 app.use("/reviews", reviewRouter);
+app.use("/drum", drumRouter);
 
 app.listen(PORT, () => {
   console.log(`Yerp' connected on PORT${PORT}`);

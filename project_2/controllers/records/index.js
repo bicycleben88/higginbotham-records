@@ -6,56 +6,6 @@ const auth = require("../../controllers/authmiddleware");
 const router = Router();
 
 let id = undefined;
-const recordsSeed = [
-  {
-    username: "Ben",
-    albumArtwork: "https://i.imgur.com/SfL749L.jpg",
-    artist: "Fleetwood Mac",
-    albumTitle: "Rumors",
-    genre: "Classic Rock",
-    releaseDate: "February 4th, 1977",
-  },
-  {
-    username: "Ben",
-    albumArtwork: "https://i.imgur.com/7CNMdae.png",
-    artist: "Weezer",
-    albumTitle: "The Blue Album",
-    genre: "Rock",
-    releaseDate: "May 10, 1994",
-  },
-  {
-    username: "Ben",
-    albumArtwork: "https://i.imgur.com/s9fgRpe.jpg",
-    artist: "Nas",
-    albumTitle: "Illmatic",
-    genre: "Rap",
-    releaseDate: "April 19, 1994",
-  },
-  {
-    username: "Ben",
-    albumArtwork: "https://i.imgur.com/jzwwyu3.jpg",
-    artist: "Britney Spears",
-    albumTitle: "...Baby One More Time",
-    genre: "Pop",
-    releaseDate: "January 12, 1999",
-  },
-  {
-    username: "Ben",
-    albumArtwork: "https://i.imgur.com/SCgZ9do.jpg",
-    artist: "Michael Jackson",
-    albumTitle: "Thriller",
-    genre: "Pop",
-    releaseDate: "February 4th, 1977",
-  },
-  {
-    username: "Ben",
-    albumArtwork: "https://i.imgur.com/1bzmMk4.jpg",
-    artist: "Blink 182",
-    albumTitle: "Enema of the State",
-    genre: "Rock",
-    releaseDate: "June 1, 1999",
-  },
-];
 
 // Routes
 
