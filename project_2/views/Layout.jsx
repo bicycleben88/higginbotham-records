@@ -6,6 +6,7 @@ class Layout extends React.Component {
       <html>
         <head>
           <script src={`${index}`} defer />
+          <script src="app.js" defer />
           <link rel="icon" href="/music-note.svg" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link
@@ -118,6 +119,9 @@ class Layout extends React.Component {
                       className="btn btn-outline-danger my-2"
                     >
                       Create a New Album
+                    </a>{" "}
+                    <a href="/drum" className="btn btn-outline-dark my-2">
+                      Play the Drums
                     </a>
                   </p>
                   <div>
