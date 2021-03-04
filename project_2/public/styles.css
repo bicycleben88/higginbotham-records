@@ -9,3 +9,9 @@ body {
 form > button:hover {
   cursor: pointer;
 }
+.letter {
+  transition: all 0.05s ease-in;
+}
+.playing {
+  transform: scale(0.8);
+}
