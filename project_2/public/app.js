@@ -7,6 +7,14 @@ function playAudio(e) {
   if (!audio) return;
   audio.currentTime = 0;
   audio.play();
+  letter.classList.add("playing");
 }
 
+function removeClass(e) {
+  if (e.propertyName !== "transform") return;
+  this.classList.remove("playing");
+}
+letters.forEach((letter) =>
+  letter.addEventListener("transitionend", removeClass)
+);
 window.addEventListener("keydown", playAudio);
