@@ -6,6 +6,8 @@ This is a Full Stack application to post your record collection. It's built with
 >
 > https://higginbotham-records.herokuapp.com/
 
+### [Video Tour](https://www.youtube.com/playlist?list=PLjYC3ZkfhqCqA8ZLeQ1uTdE46RM7rrxWS)
+
 ![Landing page to Higginbotham Records](https://i.imgur.com/pv01sLr.png)
 
 ## Technologies Used:
