@@ -48,7 +48,7 @@ This is a Full Stack application to post your record collection. It's built with
 >       - if there's an audio file, then play it from the beggining
 >     - ![play audio function](public/images/play-audio.png)
 >     - removeClass() removes css effect
->       ![remove class function](public/images/remove-class.png)
+>       - ![remove class function](public/images/remove-class.png)
 
 ## Notes
 
