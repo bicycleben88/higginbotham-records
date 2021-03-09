@@ -26,7 +26,7 @@ This is a Full Stack application to post your record collection. It's built with
 >   - Controllers
 >     - define the routes associated with particular model
 >     - follow RESTful\* convention (i.e. HTTP verb + endpoint = specific piece of data)
->   - ![record controller](https://imgur.com/PaWtvMy.png)
+>   - ![record controller](https://i.imgur.com/U56M5A5.png)
 >   - Views
 >     - are returned by a controller
 >     - make up the front end of the user interface
