@@ -45,7 +45,7 @@ This is a Full Stack application to post your record collection. It's built with
 >     - ![drum dom elements & event listeners](public/images/drum-dom.png)
 >     - playAudio()
 >       - grab the audio file associated with the keyboard key that triggered the event
->       - if there's an audio file, then play the audio file from the beggining
+>       - if there's an audio file, then play it from the beggining
 >     - ![play audio function](public/images/play-audio.png)
 >     - removeClass() removes css effect
 >       ![remove class function](public/images/remove-class.png)
