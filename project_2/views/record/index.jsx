@@ -9,7 +9,7 @@ class Index extends React.Component {
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           {records.map((record) => {
             return (
-              <div className="col d-flex align-items-stretch">
+              <div className="col d-flex align-items-stretch" id={record.id}>
                 <div className="card shadow-sm" id="index-card">
                   <a href={`/records/${record._id}`}>
                     <img
