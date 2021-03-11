@@ -7,8 +7,16 @@ class Index extends React.Component {
     return (
       <Layout title="Higginbotham Records" userId={id}>
         <form className="search-form" onSubmit={this.handleSubmit}>
-          <input type="text" className="search" placeholder="Artist or Album" />
-          <ul className="results"></ul>
+          <label for="search" className="form-label">
+            Record Search
+          </label>
+          <input
+            type="text"
+            className="search form-control"
+            name="search"
+            placeholder="Artist or Album"
+          />
+          <ul className="results list-group mb-2"></ul>
         </form>
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           {records.map((record) => {

@@ -4,7 +4,9 @@ const results = document.querySelector(".results");
 const records = [];
 
 async function getRecords() {
-  const response = await fetch("http://localhost:5000/api/records");
+  const response = await fetch(
+    "https://higginbotham-records.herokuapp.com/api/records"
+  );
   const data = await response.json();
   await records.push(...data);
 }
@@ -24,14 +26,14 @@ function displayResults() {
       const regex = new RegExp(this.value, "gi");
       const artist = record.artist.replace(
         regex,
-        `<span> ${this.value} </span>`
+        `<span class="bg-danger">${this.value}</span>`
       );
       const album = record.albumTitle.replace(
         regex,
-        `<span> ${this.value} </span>`
+        `<span class="bg-danger">${this.value}</span>`
       );
       return `
-        <li>${album} by ${artist}</li>
+        <li class="list-group-item"><span>${album} by ${artist}</span></li>
       `;
     })
     .join("");
