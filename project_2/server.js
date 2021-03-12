@@ -2,12 +2,12 @@
 require("dotenv").config();
 const { PORT, SECRET } = process.env;
 const express = require("express");
-const app = express();
 const mongoose = require("./db/dbconn");
 const session = require("express-session");
 const methodOverride = require("method-override");
 const morgan = require("morgan");
 const mongoStore = require("connect-mongo")(session);
+const app = express();
 
 //Routers
 const authRouter = require("./controllers/auth");
@@ -23,8 +23,6 @@ app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
 
 //Middleware
-//Sessions allows use of req.session to track session data
-//Use for Heroku
 app.use(
   session({
     secret: SECRET,
@@ -33,15 +31,6 @@ app.use(
     store: new mongoStore({ mongooseConnection: mongoose.connection }),
   })
 );
-//Use for LocalHost
-// app.use(
-//   session({
-//     secret: SECRET,
-//     resave: false,
-//     saveUninitialized: true,
-//     cookie: { secure: process.env.NODE_ENV === "production" },
-//   })
-// );
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));

@@ -18,11 +18,12 @@ function findResults(searchTerm, records) {
   });
 }
 
-function displayResults() {
+function displayResults(e) {
   const resultsArray = findResults(this.value, records);
+  if (e.keyCode === undefined) return; // don't let regex catch a mouse click
   const htmlText = resultsArray
     .map((record) => {
-      if (this.value === "") return;
+      if (this.value === "") return; // don't print <li> tags if the search bar is empty
       const regex = new RegExp(this.value, "gi");
       const artist = record.artist.replace(
         regex,
@@ -33,7 +34,7 @@ function displayResults() {
         `<span class="bg-danger">${this.value}</span>`
       );
       return `
-        <li class="list-group-item"><span>${album} by ${artist}</span></li>
+      <li class="list-group-item"><a href="https://higginbotham-records.herokuapp.com/records/${record._id}" class="text-dark" style="text-decoration: none">${album} by ${artist}</a></li>
       `;
     })
     .join("");
