@@ -9,6 +9,17 @@ class Layout extends React.Component {
           <script src="app.js" defer />
           <link rel="icon" href="/music-note.svg" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+             <meta
+            name="image"
+            property="og:image"
+            content="https://i.imgur.com/pv01sLr.png"
+          />
+          <meta
+            name="description"
+            property="og:description"
+            content="Record Sharing Full Stack App"
+          />
+          <meta name="author" content="Ben Higginbotham" />
           <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
             rel="stylesheet"
