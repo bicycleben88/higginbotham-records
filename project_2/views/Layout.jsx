@@ -46,7 +46,7 @@ class Layout extends React.Component {
                       </li>
                       <li>
                         <a
-                          href="https://my-portfolio.benjamin-higginbotham.vercel.app/"
+                          href="https://higginbotham.fun"
                           target="#"
                           className="text-white"
                         >
